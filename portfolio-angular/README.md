@@ -22,6 +22,12 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## Adding a new component
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+f.e. To add the MentalHealthComponentComponent to your Angular app and display it, you need to follow these steps:
+
+    Import the component in the module where you want to use it. Typically, this is the AppModule (app.module.ts / app.component.ts).
+
+    Declare the component in the declarations/imports array of the module/component.
+
+    Use the selector of the component (app-mental-health) in the HTML template of the parent component (usually app.component.html).
