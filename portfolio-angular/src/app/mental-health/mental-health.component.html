@@ -1,1 +1,11 @@
-<p>mental-health-component works!</p>
+<!-- mental-health-card.component.html -->
+<div class="card">
+  <div class="card-header">
+    {{ mentalHealthIssue?.name}}
+  </div>
+  <div class="card-body">
+    <p>{{ mentalHealthIssue?.description }}</p>
+    <p>Prevalence: {{ mentalHealthIssue?.prevalence }}</p>
+    <p>Keywords: {{ mentalHealthIssue?.keywords }}</p>
+  </div>
+</div>

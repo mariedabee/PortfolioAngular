@@ -10,5 +10,5 @@ import { MentalHealthComponentComponent } from './mental-health/mental-health.co
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'portfolio-angular';
+  title = 'mental-Health-app';
 }
