@@ -1,7 +1,8 @@
 <div class="container">
-  <app-mental-health
-    *ngFor="let issue of mentalHealthIssues"
-    [mentalHealthIssue]="issue"
-  >
-</app-mental-health>
+  <app-search-bar (search)="performSearch($event)"></app-search-bar>
+
+  <div *ngFor="let issue of mentalHealthIssues">
+    <app-mental-health [mentalHealthIssue]="issue"></app-mental-health>
+  </div>
+  
 </div>

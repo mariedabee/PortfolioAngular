@@ -1,26 +1,39 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
 import { MentalHealthComponentComponent } from './mental-health/mental-health.component';
-import { MentalHealthService } from './mental-health.service';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HttpClientModule, CommonModule, MentalHealthComponentComponent],
-  providers: [MentalHealthService],
+  imports: [
+    HttpClientModule,
+    CommonModule,
+    RouterOutlet,
+    MentalHealthComponentComponent,
+    SearchBarComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'mental-Health-app';
   mentalHealthIssues: any[] = [];
 
-  constructor(private mentalHealthService: MentalHealthService) {}
+  constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {
-    this.mentalHealthService.getMentalHealthIssues().subscribe((data) => {
-      this.mentalHealthIssues = data;
-    });
+  performSearch(term: string) {
+    this.http
+      .get<any[]>(`http://localhost:4000/api/mental-illnesses?search=${term}`)
+      .subscribe(
+        (data) => {
+          this.mentalHealthIssues = data;
+        },
+        (error) => {
+          console.error('Error fetching search results:', error);
+        }
+      );
   }
 }
