@@ -1,0 +1,140 @@
+// Connect to your MongoDB database
+use yourDatabaseName;
+
+// Insert multiple documents into the mentalIllnesses collection
+db.mentalIllnesses.insertMany([
+  {
+    name: "Anxiety Disorder",
+    description: "A mental health disorder characterized by feelings of worry, anxiety, or fear that are strong enough to interfere with one's daily activities.",
+    prevalence: "Global prevalence is estimated to be around 7.3%.",
+    keywords: ["Anxiety", "Fear", "Worry"]
+  },
+  {
+    name: "Depression",
+    description: "A mood disorder that causes a persistent feeling of sadness and loss of interest. It affects how you feel, think, and handle daily activities.",
+    prevalence: "More than 264 million people worldwide are affected by depression.",
+    keywords: ["Depression", "Sadness", "Loss of interest"]
+  },
+  {
+    name: "Bipolar Disorder",
+    description: "A disorder associated with episodes of mood swings ranging from depressive lows to manic highs.",
+    prevalence: "Approximately 45 million people worldwide are affected by bipolar disorder.",
+    keywords: ["Bipolar", "Mood swings", "Manic"]
+  },
+  {
+    name: "Obsessive-Compulsive Disorder (OCD)",
+    description: "A disorder characterized by excessive thoughts (obsessions) that lead to repetitive behaviors (compulsions).",
+    prevalence: "About 2-3% of the population is affected by OCD.",
+    keywords: ["OCD", "Obsessions", "Compulsions"]
+  },
+  {
+    name: "Post-Traumatic Stress Disorder (PTSD)",
+    description: "A disorder characterized by failure to recover after experiencing or witnessing a terrifying event.",
+    prevalence: "PTSD affects approximately 3.5% of U.S. adults every year.",
+    keywords: ["PTSD", "Trauma", "Stress"]
+  },
+  {
+    name: "Schizophrenia",
+    description: "A serious mental disorder in which people interpret reality abnormally.",
+    prevalence: "About 20 million people worldwide are affected by schizophrenia.",
+    keywords: ["Schizophrenia", "Reality", "Psychosis"]
+  },
+  {
+    name: "Eating Disorders",
+    description: "A range of psychological conditions that cause unhealthy eating habits to develop.",
+    prevalence: "Eating disorders affect at least 9% of the worldwide population.",
+    keywords: ["Eating disorders", "Anorexia", "Bulimia"]
+  },
+  {
+    name: "Attention Deficit Hyperactivity Disorder (ADHD)",
+    description: "A chronic condition including attention difficulty, hyperactivity, and impulsiveness.",
+    prevalence: "About 5% of children and 2.5% of adults worldwide are affected by ADHD.",
+    keywords: ["ADHD", "Attention", "Hyperactivity", "Impulsiveness"]
+  },
+  {
+    name: "Autism Spectrum Disorder (ASD)",
+    description: "A developmental disorder that affects communication and behavior.",
+    prevalence: "Globally, around 1 in 160 children has an ASD.",
+    keywords: ["Autism", "ASD", "Communication", "Behavior"]
+  },
+  {
+    name: "Panic Disorder",
+    description: "An anxiety disorder characterized by recurrent unexpected panic attacks.",
+    prevalence: "Panic disorder affects about 2-3% of adults in the United States.",
+    keywords: ["Panic", "Anxiety", "Attacks"]
+  },
+  {
+    name: "Borderline Personality Disorder (BPD)",
+    description: "A disorder characterized by unstable moods, behavior, and relationships.",
+    prevalence: "BPD affects about 1.6% of the adult U.S. population.",
+    keywords: ["BPD", "Personality", "Unstable", "Relationships"]
+  },
+  {
+    name: "Social Anxiety Disorder",
+    description: "A chronic mental health condition in which social interactions cause irrational anxiety.",
+    prevalence: "Social anxiety disorder affects about 15 million adults in the United States.",
+    keywords: ["Social Anxiety", "Anxiety", "Interactions"]
+  },
+  {
+    name: "Generalized Anxiety Disorder (GAD)",
+    description: "A disorder characterized by excessive, uncontrollable worry about everyday things.",
+    prevalence: "GAD affects about 6.8 million adults in the United States.",
+    keywords: ["GAD", "Anxiety", "Worry"]
+  },
+  {
+    name: "Postpartum Depression",
+    description: "A type of mood disorder associated with childbirth, which can affect both sexes.",
+    prevalence: "Postpartum depression affects about 1 in 9 mothers.",
+    keywords: ["Postpartum", "Depression", "Childbirth"]
+  },
+  {
+    name: "Seasonal Affective Disorder (SAD)",
+    description: "A type of depression that's related to changes in seasons and begins and ends at about the same times every year.",
+    prevalence: "SAD affects about 5% of the U.S. population.",
+    keywords: ["SAD", "Seasonal", "Depression"]
+  },
+  {
+    name: "Psychosis",
+    description: "A condition that affects the way your brain processes information, causing you to lose touch with reality.",
+    prevalence: "About 3% of people will experience psychosis at some time in their lives.",
+    keywords: ["Psychosis", "Reality", "Information"]
+  },
+  {
+    name: "Phobias",
+    description: "An extreme or irrational fear of or aversion to something.",
+    prevalence: "Phobias affect about 19 million adults in the United States.",
+    keywords: ["Phobias", "Fear", "Aversion"]
+  },
+  {
+    name: "Dissociative Identity Disorder (DID)",
+    description: "A disorder characterized by the presence of two or more distinct personality states.",
+    prevalence: "DID affects about 1.5% of the general population.",
+    keywords: ["
+
+DID", "Dissociative", "Personality"]
+},
+{
+name: "Hoarding Disorder",
+description: "A persistent difficulty discarding or parting with possessions because of a perceived need to save them.",
+prevalence: "Hoarding disorder affects about 2-6% of the population.",
+keywords: ["Hoarding", "Possessions", "Difficulty"]
+},
+{
+name: "Sleep Disorders",
+description: "Conditions that result in changes in the way that you sleep.",
+prevalence: "Sleep disorders affect about 50-70 million adults in the United States.",
+keywords: ["Sleep", "Disorders", "Insomnia"]
+},
+{
+name: "Substance Use Disorder",
+description: "A condition in which the use of one or more substances leads to a clinically significant impairment or distress.",
+prevalence: "About 20.4 million people in the U.S. have a substance use disorder.",
+keywords: ["Substance", "Use", "Disorder"]
+},
+{
+name: "Alzheimer's Disease",
+description: "A progressive disease that destroys memory and other important mental functions.",
+prevalence: "Alzheimer's disease affects about 5.8 million Americans.",
+keywords: ["Alzheimer's", "Memory", "Mental Functions"]
+}
+]);
