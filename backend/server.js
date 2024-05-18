@@ -4,7 +4,9 @@ const { port } = require("./config");
 const mentalIllnessesRouter = require("./routes/mentalIllnesses");
 
 const app = express();
+const cors = require("cors");
 
+app.use(cors());
 app.use(express.json());
 
 connectDB();

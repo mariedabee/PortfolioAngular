@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 /**
- * Defines the structure of a mental health issue object with properties. 
+ * Defines the structure of a mental health issue object with properties.
  */
 interface MentalHealthIssue {
   name: string;
@@ -13,9 +13,9 @@ interface MentalHealthIssue {
 }
 
 /**
- * The Injectable decorator is used to mark the class as a service 
+ * The Injectable decorator is used to mark the class as a service
  * that can be injected.
- * @Injectable({ providedIn: 'root' }): Indicates that this service should 
+ * @Injectable({ providedIn: 'root' }): Indicates that this service should
  * be provided at the root level, making it a singleton service.
  */
 @Injectable({
@@ -27,7 +27,7 @@ interface MentalHealthIssue {
  * command to create it : ng generate service mental-health
  * */
 export class MentalHealthService {
-  private apiUrl = 'http://localhost:3000/mental-health';
+  private apiUrl = 'http://localhost:4000/api/mental-illnesses';
 
   /**
    * Injects the HttpClient service for making HTTP requests.

@@ -1,12 +1,7 @@
 <div class="container">
-
   <app-mental-health
-    [mentalHealthIssue]="{
-      name: 'Depression',
-      description: 'A mood disorder characterized by persistent sadness...',
-      prevalence: 'Worldwide, millions of people are affected.',
-      keywords: ['depression', 'mood', 'disorder']
-    }"
-  />
-
+    *ngFor="let issue of mentalHealthIssues"
+    [mentalHealthIssue]="issue"
+  >
+</app-mental-health>
 </div>
