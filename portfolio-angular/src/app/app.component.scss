@@ -1,0 +1,18 @@
+/* container styling */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* content wrapper to hold sidebar and main content */
+.content-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+/* main content styling */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    flex: 1;
+}

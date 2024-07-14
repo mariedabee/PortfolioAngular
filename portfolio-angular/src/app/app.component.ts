@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { MentalHealthComponentComponent } from './mental-health/mental-health.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { SideBarComponent } from "./side-bar/side-bar.component";
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     RouterOutlet,
     MentalHealthComponentComponent,
     SearchBarComponent,
-  ],
+    SideBarComponent
+],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
