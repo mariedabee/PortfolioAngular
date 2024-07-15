@@ -1,0 +1,8 @@
+<div class="container">
+  <app-search-bar (search)="performSearch($event)"></app-search-bar>
+  <div class="main-content">
+      <div *ngFor="let issue of mentalHealthIssues">
+        <app-mental-health-card [mentalHealthIssue]="issue"></app-mental-health-card>
+      </div>
+    </div>
+</div>
