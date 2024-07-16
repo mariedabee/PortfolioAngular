@@ -10,9 +10,11 @@
     flex: 1;
 }
 
-/* main content styling */
 .main-content {
-    margin-left: 250px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     flex: 1;
 }
