@@ -30,6 +30,17 @@
         textarea {
             resize: vertical;
         }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        input.ng-invalid.ng-touched,
+        textarea.ng-invalid.ng-touched {
+            border-color: red;
+        }
     }
 
     button {
