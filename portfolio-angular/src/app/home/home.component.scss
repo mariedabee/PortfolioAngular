@@ -1,18 +1,30 @@
 /* container styling */
-.container {
+.home-container {
     display: flex;
     flex-direction: column;
-}
-
-/* content wrapper to hold sidebar and main content */
-.content-wrapper {
-    display: flex;
-    flex: 1;
+    align-items: center; /* Center the content horizontally */
 }
 
 /* main content styling */
-.main-content {
-    margin-left: 250px;
+.home-main-content {
+    width: 100%; /* Full width of the available space */
     padding: 20px;
-    flex: 1;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+}
+
+.card-container {
+    width: 100%;
+    max-width: 1200px; /* Maximum width for the content area */
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line if necessary */
+    justify-content: center; /* Center the cards inside the container */
+}
+
+app-mental-health-card {
+    width: 100%;
+    /* Ensure the card takes the full width of the wrapper */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in the width */
 }

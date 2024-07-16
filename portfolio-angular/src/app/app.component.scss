@@ -1,20 +1,25 @@
 /* container styling */
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Ensure items are aligned in a row */
+    height: 100vh; /* Make sure the container takes the full viewport height */
 }
 
-/* content wrapper to hold sidebar and main content */
-.content-wrapper {
-    display: flex;
-    flex: 1;
+/* sidebar styling */
+.sidebar {
+    width: 250px; /* Fixed width for the sidebar */
+    background-color: #111;
+    padding-top: 20px;
+    position: fixed; /* Fixed position to keep it in place */
+    top: 0;
+    bottom: 0; /* Ensure it spans the full height of the viewport */
 }
 
+/* main content styling */
 .main-content {
-    box-sizing: border-box;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
+    margin-left: 250px;  /* This margin should match the sidebar width */
     padding: 20px;
     flex: 1;
+    overflow-y: auto;  /* Allows for scrolling if content overflows */
+    box-sizing: border-box;
 }

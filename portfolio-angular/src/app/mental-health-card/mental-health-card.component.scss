@@ -1,3 +1,10 @@
+:host {
+    display: block;
+    width: 100%;
+    /* This should match the width defined in the parent */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in the width */
+}
 .card {
     border: 1px solid #ccc;
     border-radius: 5px;
