@@ -1,4 +1,3 @@
-// src/app/services/location.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -7,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class LocationService {
-  private apiKey = 'YOUR_API_KEY';
+  private apiKey = 'a353a6edc3f84403a54c837bf67bf833'; 
   private apiUrl = 'https://api.opencagedata.com/geocode/v1/json';
 
   constructor(private http: HttpClient) {}
