@@ -1,12 +1,22 @@
-<div class="suggestion-box">
-  <h2>Submit Your Suggestion</h2>
-  <form (ngSubmit)="onSubmit()" #suggestionForm="ngForm">
-    <textarea 
-      name="suggestion" 
-      [(ngModel)]="suggestion" 
-      required
-      placeholder="Enter your suggestion here..."
-    ></textarea>
-    <button type="submit" [disabled]="!suggestionForm.form.valid">Submit</button>
-  </form>
+<div class="background">
+  <div class="suggestion-box">
+    <h2>Submit Your Suggestion</h2>
+    <p class="description">
+      Your well-being matters to us. If you have ideas or suggestions on how we
+      can improve our support and resources, please share them here. Your
+      feedback helps us create a better experience and more effective resources
+      for everyone. All suggestions are anonymous.
+    </p>
+    <form (ngSubmit)="onSubmit()" #suggestionForm="ngForm">
+      <textarea
+        name="suggestion"
+        [(ngModel)]="suggestion"
+        required
+        placeholder="Enter your suggestion here..."
+      ></textarea>
+      <button type="submit" [disabled]="!suggestionForm.form.valid">
+        Submit
+      </button>
+    </form>
+  </div>
 </div>
