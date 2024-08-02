@@ -9,7 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, SideBarComponent, RouterOutlet, HttpClientModule],
+  imports: [CommonModule, SideBarComponent, RouterOutlet, HttpClientModule, ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

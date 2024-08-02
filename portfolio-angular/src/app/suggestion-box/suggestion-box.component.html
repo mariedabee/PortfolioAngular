@@ -1,0 +1,12 @@
+<div class="suggestion-box">
+  <h2>Submit Your Suggestion</h2>
+  <form (ngSubmit)="onSubmit()" #suggestionForm="ngForm">
+    <textarea 
+      name="suggestion" 
+      [(ngModel)]="suggestion" 
+      required
+      placeholder="Enter your suggestion here..."
+    ></textarea>
+    <button type="submit" [disabled]="!suggestionForm.form.valid">Submit</button>
+  </form>
+</div>
