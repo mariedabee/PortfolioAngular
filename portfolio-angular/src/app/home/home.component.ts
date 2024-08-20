@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
 
-import { MentalHealthCardComponent } from "../mental-health-card/mental-health-card.component";
+import { MentalHealthCardComponent } from "./mental-health-card/mental-health-card.component";
 import { CommonModule } from '@angular/common';
 
 @Component({
