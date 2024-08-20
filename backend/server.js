@@ -8,7 +8,8 @@ const nodemailer = require("nodemailer");
 
 // Import routes
 const mentalIllnessesRouter = require("./routes/mentalIllnesses");
-const contactRoute = require("./routes/contact");
+const contactRouter = require("./routes/contact");
+const suggestionRouter = require("./routes/suggestions")
 
 const app = express();
 const cors = require("cors");
@@ -20,7 +21,8 @@ app.use(bodyParser.json());
 connectDB();
 
 app.use("/api/mental-illnesses", mentalIllnessesRouter);
-app.use("/api/send-contact-email", contactRoute);
+app.use("/api/send-contact-email", contactRouter);
+app.use("/api/suggestions", suggestionRouter);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

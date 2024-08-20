@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { SuggestionService } from '../services/suggestion.service';
+import { SuggestionService } from '../../services/suggestion.service';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-suggestion-box',
