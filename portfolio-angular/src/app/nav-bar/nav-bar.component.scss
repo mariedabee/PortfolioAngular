@@ -1,0 +1,47 @@
+.cloudy-navbar {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    border-radius: 50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    width: fit-content;
+    max-width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cloudy-navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.cloudy-navbar li {
+    display: inline;
+}
+
+.cloudy-navbar a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.cloudy-navbar a:hover {
+    color: #000;
+}
+
+/* For better visual effects on smaller screens */
+@media (max-width: 768px) {
+    .cloudy-navbar {
+        max-width: 95%;
+    }
+
+    .cloudy-navbar a {
+        padding: 8px 16px;
+    }
+}

@@ -3,10 +3,12 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-side-bar',
+  selector: 'app-nav-bar',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  templateUrl: './side-bar.component.html',
-  styleUrl: './side-bar.component.scss',
+  templateUrl: './nav-bar.component.html',
+  styleUrl: './nav-bar.component.scss'
 })
-export class SideBarComponent {}
+export class NavBarComponent {
+
+}
