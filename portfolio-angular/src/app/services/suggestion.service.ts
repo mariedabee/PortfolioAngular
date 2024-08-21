@@ -13,4 +13,8 @@ export class SuggestionService {
   submitSuggestion(suggestion: string): Observable<any> {
     return this.http.post(this.apiUrl, { suggestion });
   }
+  getSuggestions(): Observable<any> {
+    console.log('fetching suggestions ...')
+    return this.http.get<any[]>(this.apiUrl);
+  }
 }

@@ -2,18 +2,22 @@ import { Component } from '@angular/core';
 import { SuggestionService } from '../../services/suggestion.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-suggestion-box',
   standalone: true,
   templateUrl: './suggestion-box.component.html',
   styleUrls: ['./suggestion-box.component.scss'],
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
 })
 export class SuggestionBoxComponent {
   suggestion: string = '';
 
-  constructor(private suggestionService: SuggestionService) {}
+  constructor(
+    private router: Router,
+    private suggestionService: SuggestionService
+  ) {}
 
   onSubmit() {
     if (this.suggestion.trim()) {
@@ -27,5 +31,9 @@ export class SuggestionBoxComponent {
         }
       );
     }
+  }
+
+  navigateToAnotherComponent() {
+    this.router.navigate(['/suggestions-page']);
   }
 }
