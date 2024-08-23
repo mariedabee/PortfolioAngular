@@ -3,11 +3,11 @@
     <h2>Community Suggestions</h2>
     <div *ngFor="let suggestion of suggestions" class="suggestion-card">
       <div class="suggestion-content">
-        <p>{{ suggestion.type }}</p>
+        <p>{{ suggestion.suggestion }}</p>
         <small>{{ suggestion.createdAt }}</small>
       </div>
       <div class="actions">
-        <button class="like-button" >
+        <button (click)="likeSuggestion(suggestion)" class="like-button">
           👍 {{ suggestion.likes }}
         </button>
       </div>
@@ -15,12 +15,12 @@
         <h3>Comments</h3>
         <div *ngFor="let comment of suggestion.comments" class="comment">
           <p>{{ comment.text }}</p>
-          <small>{{ comment.createdAt  }}</small>
+          <small>{{ comment.createdAt }}</small>
         </div>
-        <form (ngSubmit)="addComment(suggestion)" #commentForm="ngForm">
+        <form (ngSubmit)="addComment(suggestion, commentForm)" #commentForm="ngForm">
           <textarea
             name="comment"
-            [(ngModel)]="newComment"
+            [(ngModel)]="suggestion.newComment"
             required
             placeholder="Enter your comment..."
           ></textarea>
