@@ -1,13 +1,22 @@
+// Variables for color palette
+$contact-background-color: #3333334f;
+$contact-text-color: #f5f5f5;
+$contact-button-gradient: linear-gradient(135deg, #a2c2e6, #f3e6f5);
+$contact-button-text-color: #9e9d9d;
+$contact-border-color: #444;
+$contact-placeholder-color: #545454;
+$contact-error-color: #e74c3c;
+
 .container {
     display: flex;
     flex-direction: column;
     flex: 1;
-    max-width: 75%;
-    margin-left: 20%;
+    max-width: 60%;
+    margin: 0 auto; // Center the container
     padding: 20px;
-    border: 1px solid #04209f89;
+    border: 1px solid $contact-border-color;
     border-radius: 10px;
-    background-color: #efefeff5;
+    background-color: $contact-background-color;
 
     .form-group {
         margin-bottom: 20px;
@@ -16,15 +25,22 @@
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
+            color: $contact-text-color;
         }
 
         input,
         textarea {
             width: 100%;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid $contact-border-color;
             border-radius: 5px;
+            background-color: $contact-background-color;
+            color: $contact-text-color;
             box-sizing: border-box;
+
+            &::placeholder {
+                color: $contact-placeholder-color;
+            }
         }
 
         textarea {
@@ -32,14 +48,14 @@
         }
 
         .error {
-            color: red;
+            color: $contact-error-color;
             font-size: 14px;
             margin-top: 5px;
         }
 
         input.ng-invalid.ng-touched,
         textarea.ng-invalid.ng-touched {
-            border-color: red;
+            border-color: $contact-error-color;
         }
     }
 
@@ -49,14 +65,19 @@
         padding: 10px;
         border: none;
         border-radius: 5px;
-        background-color: #091d31;
-        color: white;
+        background: $contact-button-gradient; // Apply the gradient here
+        color: $contact-button-text-color;
         font-size: 16px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: background 0.3s ease; // Use `background` for gradients
+
+        &:hover {
+            background: linear-gradient(135deg, darken(#a2c2e6, 10%), darken(#f3e6f5, 10%)); // Adjust gradient for hover
+        }
 
         &:disabled {
-            background-color: #aaa;
+            background: $contact-button-gradient;
+            opacity: 0.6;
             cursor: not-allowed;
         }
     }

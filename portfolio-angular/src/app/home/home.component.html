@@ -1,11 +1,11 @@
-<!-- home component html-->
+<!-- home component html -->
 <div class="home-container">
-  <app-search-bar (search)="performSearch($event)"></app-search-bar>
+  <app-search-bar class="search-bar" (search)="performSearch($event)"></app-search-bar>
   <div class="home-main-content">
-  <div class="card-container">
-    <div *ngFor="let issue of mentalHealthIssues">
-      <app-mental-health-card [mentalHealthIssue]="issue"></app-mental-health-card>
+    <div class="card-container">
+      <div *ngFor="let issue of mentalHealthIssues">
+        <app-mental-health-card [mentalHealthIssue]="issue"></app-mental-health-card>
+      </div>
     </div>
   </div>
-</div>
 </div>

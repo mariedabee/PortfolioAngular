@@ -1,0 +1,28 @@
+/* styles.css */
+.app-container {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    /* Ensures the background doesn't overflow */
+}
+
+.background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    /* Places the background behind the content */
+    background: linear-gradient(135deg, #a2c2e6, #f3e6f5);
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+.content-layer {
+    position: relative;
+    z-index: 1;
+    font-size: 1em;
+        line-height: 1.6;
+        font-style: normal;
+}

@@ -1,9 +1,10 @@
-<!--app.component.html -->
-<div>
-  <div>
-    <app-nav-bar ></app-nav-bar>
+<!-- app.component.html -->
+<div class="app-container">
+  <div class="background-layer"></div>
+  <div class="content-layer">
+    <app-nav-bar></app-nav-bar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
   </div>
- <main >
-    <router-outlet></router-outlet> <!-- This will load ContactFormComponent or other components -->
-  </main>
 </div>
