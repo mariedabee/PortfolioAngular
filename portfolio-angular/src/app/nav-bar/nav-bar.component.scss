@@ -35,6 +35,29 @@
     color: #000;
 }
 
+.auth-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 20px;
+    /* Space before login/signup */
+    border-left: 2px solid rgba(0, 0, 0, 0.1);
+    /* Separator */
+}
+
+.auth-links a {
+    padding: 8px 16px;
+    border-radius: 20px;
+    /* Rounded corners for login/signup buttons */
+    background-color: #e0e5ec;
+    /* Subtle background */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth-links a:hover {
+    background-color: #c3cfe2;
+    color: #fff;
+}
 /* For better visual effects on smaller screens */
 @media (max-width: 768px) {
     .cloudy-navbar {

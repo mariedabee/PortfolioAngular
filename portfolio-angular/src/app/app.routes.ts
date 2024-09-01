@@ -6,6 +6,8 @@ import { NeedHelpComponent } from './need-help/need-help.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SuggestionBoxComponent } from './suggestions/suggestion-box/suggestion-box.component';
 import { SuggestionsPageComponent } from './suggestions/suggestions-page/suggestions-page.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignUpComponent } from './auth/sign-up/sign-up.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -14,5 +16,7 @@ export const routes: Routes = [
   { path: 'contact', component: ContactFormComponent },
   { path: 'need-help', component: NeedHelpComponent },
   { path: 'suggestion-box', component: SuggestionBoxComponent },
-  { path: 'suggestions-page', component: SuggestionsPageComponent}
+  { path: 'suggestions-page', component: SuggestionsPageComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'signup', component: SignUpComponent}
 ];
