@@ -1,0 +1,22 @@
+<div class="need-help-container">
+  <!-- Emergency Help Section -->
+  <div *ngIf="hotline" class="emergency-section">
+    <h1>Need Immediate Help?</h1>
+    <p class="alert-text">Please call the crisis hotline:</p>
+    <p class="hotline-number">{{ hotline }}</p>
+  </div>
+
+  <div *ngIf="!hotline">
+    <p>Fetching your location and the nearest crisis hotline...</p>
+  </div>
+
+  <!-- Self-Help Options Section -->
+  <div class="self-help-options">
+    <h2>Explore Self-Help Resources</h2>
+    <p>If you're looking for additional resources, here are some options:</p>
+
+    <!-- Buttons for navigation -->
+    <button (click)="goToSelfHelpExercises()" class="self-help-button">Self Help Exercises</button>
+    <button (click)="goToBookRecommendations()" class="self-help-button">Book Recommendations</button>
+  </div>
+</div>

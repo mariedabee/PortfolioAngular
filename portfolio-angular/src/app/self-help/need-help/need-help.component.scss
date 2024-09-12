@@ -1,0 +1,175 @@
+// Variables from your provided palette
+$background-color: #3333334f;
+$text-color: #f5f5f5;
+$button-gradient: linear-gradient(135deg, #a2c2e6, #f3e6f5);
+$other-button-gradient: linear-gradient(135deg, #6f849c, #8f8890);
+$button-text-color: #9e9d9d;
+$other-button-text-color: #585858;
+$border-color: #444;
+$placeholder-color: #545454;
+$description-color: #545454;
+$alert-background: #444; // Darker background for emergency section
+
+// Main Container Styling
+.need-help-container {
+    background-color: $background-color;
+    color: $text-color;
+    max-width: 800px;
+    margin: 0 auto; // Centers the container horizontally
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif; // Ensure consistent font family
+
+    // Center content vertically and horizontally
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; // Ensures the container takes full viewport height
+}
+
+// Emergency Section Styling
+.emergency-section {
+    background-color: $alert-background;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; // Center text within the section
+
+    h1 {
+        font-size: 1.8em;
+        color: $text-color;
+        margin-bottom: 10px;
+        font-family: 'Roboto', sans-serif; // Ensure consistent font family
+        font-weight: normal; // Ensure consistency
+        font-style: normal;
+    }
+
+    .alert-text {
+        font-size: 1.2em;
+        color: $text-color;
+        margin-bottom: 15px;
+        font-family: 'Roboto', sans-serif; // Ensure consistent font family
+        font-weight: normal; // Ensure consistency
+        font-style: normal;
+    }
+
+    .hotline-number {
+        font-size: 2em;
+        font-weight: bold;
+        color: $text-color;
+        background-color: darken($background-color, 10%);
+        padding: 10px;
+        border-radius: 6px;
+        font-family: 'Roboto', sans-serif; // Ensure consistent font family
+    }
+}
+
+// Loading state when hotline is being fetched
+.loading-state {
+    font-size: 1.2em;
+    color: $description-color;
+    font-style: italic;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif; // Ensure consistent font family
+    font-weight: normal; // Ensure consistency
+    text-align: center; // Center the text
+}
+
+// Self Help Options Section
+.self-help-options {
+    margin-top: 30px;
+    text-align: center; // Center text and buttons within the section
+
+    h2 {
+        font-size: 1.6em;
+        margin-bottom: 15px;
+        color: $text-color;
+        font-family: 'Roboto', sans-serif; // Ensure consistent font family
+        font-weight: normal; // Ensure consistency
+        font-style: normal;
+    }
+
+    p {
+        font-size: 1em;
+        color: $description-color;
+        margin-bottom: 20px;
+        font-family: 'Roboto', sans-serif; // Ensure consistent font family
+        font-weight: normal; // Ensure consistency
+        font-style: normal;
+    }
+
+    // Self-help button styling with gradient
+    .self-help-button {
+        background: $button-gradient;
+        color: $button-text-color;
+        border: none;
+        border-radius: 8px;
+        padding: 12px 24px;
+        margin: 10px;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        font-family: 'Roboto', sans-serif; // Ensure consistent font family
+        font-weight: normal; // Ensure consistency
+        font-style: normal;
+
+        &:hover {
+            background: linear-gradient(135deg, darken(#a2c2e6, 10%), darken(#f3e6f5, 10%));
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba($button-text-color, 0.3);
+        }
+    }
+
+    // Book recommendations link styled like a button
+    a {
+        display: inline-block;
+        background: $other-button-gradient;
+        color: $other-button-text-color;
+        padding: 12px 24px;
+        margin: 10px;
+        border-radius: 8px;
+        font-size: 1.1em;
+        text-decoration: none;
+        transition: background 0.3s ease;
+        font-family: 'Roboto', sans-serif; // Ensure consistent font family
+        font-weight: normal; // Ensure consistency
+        font-style: normal;
+
+        &:hover {
+            background: linear-gradient(135deg, darken(#6f849c, 10%), darken(#8f8890, 10%));
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba($other-button-text-color, 0.3);
+        }
+    }
+}
+
+// Responsive adjustments for smaller screens
+@media (max-width: 600px) {
+    .need-help-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    .hotline-number {
+        font-size: 1.6em;
+    }
+
+    .self-help-button,
+    a {
+        width: 100%;
+        padding: 12px;
+        font-size: 1em;
+    }
+}

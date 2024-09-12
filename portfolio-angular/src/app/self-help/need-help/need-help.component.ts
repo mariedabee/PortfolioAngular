@@ -1,17 +1,20 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { GeolocationService } from '../services/geolocation.service';
-import { LocationService } from '../services/location.service';
+import { GeolocationService } from '../../services/geolocation.service';
+import { LocationService } from '../../services/location.service';
 import { CommonModule } from '@angular/common';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-need-help',
   standalone: true,
-  imports: [CommonModule, HttpClientModule], 
+  imports: [CommonModule, HttpClientModule],
   templateUrl: './need-help.component.html',
   styleUrls: ['./need-help.component.scss'],
 })
 export class NeedHelpComponent implements OnInit {
+  constructor(private router: Router) {}
+
   location: string = '';
   hotlines: { [key: string]: string } = {
     US: '1-800-273-TALK (8255)',
@@ -42,5 +45,15 @@ export class NeedHelpComponent implements OnInit {
             'Please call your local emergency number.';
         });
     });
+  }
+
+  // Method to navigate programmatically to the book recommendations page
+  goToBookRecommendations(): void {
+    this.router.navigate(['/self-help-book-recommendation']);
+  }
+
+  // Method to navigate to self-help exercises
+  goToSelfHelpExercises(): void {
+    this.router.navigate(['/self-help-excercises']);
   }
 }
