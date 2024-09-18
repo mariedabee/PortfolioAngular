@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "name": "Mindfulness Breathing",
+    "description": "A breathing exercise to help calm the mind and reduce anxiety by focusing on deep, slow breathing.",
+    "type": "Mindfulness",
+    "duration": "5 minutes",
+    "helpsWith": "Anxiety, Stress, Emotional Regulation",
+    "steps": [
+      "Find a Comfortable Position: Sit or lie down in a comfortable position.",
+      "Close Your Eyes: This helps reduce distractions and increases focus.",
+      "Breathe In Slowly: Inhale deeply through your nose for a count of 4, feeling your belly expand.",
+      "Hold Your Breath: Hold your breath for a count of 4.",
+      "Breathe Out Slowly: Exhale slowly through your mouth for a count of 6, letting go of any tension.",
+      "Repeat: Continue this cycle for 5 minutes, focusing solely on your breath and the sensation of air entering and leaving your body.",
+      "Finish: Slowly open your eyes, take a moment to notice how you feel, and gradually transition back to your day."
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Thought Recording",
+    "description": "A CBT exercise designed to identify and challenge negative thought patterns.",
+    "type": "CBT",
+    "duration": "10 minutes",
+    "helpsWith": "Depression, Anxiety, Negative Thought Patterns",
+    "steps": [
+      "Identify Negative Thoughts: When you notice a negative thought, write it down in a journal.",
+      "Record the Situation: Note the situation or event that triggered this thought.",
+      "Examine the Thought: Identify any cognitive distortions (e.g., all-or-nothing thinking, overgeneralization).",
+      "Challenge the Thought: Ask yourself questions to challenge the validity of the thought (e.g., 'What evidence do I have that supports or contradicts this thought?').",
+      "Replace with Balanced Thought: Write down a more balanced or realistic thought that counteracts the negative one.",
+      "Reflect: Note how you feel after challenging the thought and replacing it with a more balanced perspective.",
+      "Repeat: Practice this regularly to help shift your thought patterns over time."
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Body Scan Meditation",
+    "description": "A mindfulness practice focusing on different parts of the body to increase awareness and relieve tension.",
+    "type": "Mindfulness",
+    "duration": "15 minutes",
+    "helpsWith": "Chronic Pain, Stress, Anxiety",
+    "steps": [
+      "Get Comfortable: Lie down or sit comfortably with your back straight.",
+      "Close Your Eyes: Focus inwardly to minimize distractions.",
+      "Focus on Your Feet: Direct your attention to your feet. Notice any sensations, warmth, or tension.",
+      "Gradually Move Up: Slowly shift your focus up through your legs, hips, abdomen, chest, arms, and finally to your head.",
+      "Observe Sensations: For each area, observe any physical sensations without judgment.",
+      "Relax Each Area: As you focus on each body part, try to relax any tension you may feel.",
+      "Complete the Scan: Once you’ve scanned your entire body, take a few deep breaths and gently bring your awareness back to the present moment."
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Gratitude Journaling",
+    "description": "A journaling exercise to enhance positivity by focusing on things you’re grateful for.",
+    "type": "Journaling",
+    "duration": "5 minutes",
+    "helpsWith": "Depression, Low Self-Esteem, Emotional Well-being",
+    "steps": [
+      "Find a Quiet Place: Sit down in a quiet space where you can reflect.",
+      "Choose a Medium: Use a journal, notebook, or digital device for writing.",
+      "List Things You're Grateful For: Write down at least three things you're grateful for today. These can be big or small, from a supportive friend to a beautiful sunset.",
+      "Reflect on Each Item: For each item on your list, write a sentence or two about why you're grateful for it and how it positively impacts your life.",
+      "Set a Routine: Practice this exercise daily or weekly to cultivate a habit of gratitude.",
+      "Review: Periodically review your entries to remind yourself of the positive aspects of your life."
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Progressive Muscle Relaxation",
+    "description": "A relaxation technique involving tensing and then relaxing different muscle groups to reduce stress and tension.",
+    "type": "Relaxation",
+    "duration": "10 minutes",
+    "helpsWith": "Stress, Anxiety, Insomnia",
+    "steps": [
+      "Find a Quiet Place: Sit or lie down in a comfortable position.",
+      "Close Your Eyes: Focus on your body and the relaxation process.",
+      "Start with Your Feet: Tense the muscles in your feet for 5-10 seconds, then release and relax for 15-20 seconds.",
+      "Move Up the Body: Progressively tense and relax each muscle group: calves, thighs, abdomen, chest, arms, and face.",
+      "Focus on Relaxation: After tensing each muscle group, pay attention to the sensation of relaxation and let go of any remaining tension.",
+      "Complete the Routine: Once you’ve worked through all muscle groups, take a few deep breaths and notice how your body feels."
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Behavioral Activation",
+    "description": "A CBT technique to encourage engagement in activities that promote positive mood and reduce inactivity.",
+    "type": "CBT",
+    "duration": "20 minutes",
+    "helpsWith": "Depression, Lack of Motivation, Low Mood",
+    "steps": [
+      "Identify Low-Mood Activities: Make a list of activities that you enjoy or find meaningful but have been avoiding.",
+      "Set Small Goals: Choose one or two activities from your list that you can start with.",
+      "Create an Action Plan: Plan specific times and dates to engage in these activities.",
+      "Track Your Activities: Keep a record of when you complete these activities and how you felt before and after.",
+      "Reflect on the Impact: Note any changes in your mood or motivation and adjust your plan as needed.",
+      "Gradually Increase: As you build momentum, gradually include more activities from your list."
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Visualization Meditation",
+    "description": "A mindfulness practice where you use mental imagery to create a peaceful scene and reduce stress.",
+    "type": "Mindfulness",
+    "duration": "10 minutes",
+    "helpsWith": "Stress, Anxiety, Emotional Regulation",
+    "steps": [
+      "Find a Comfortable Position: Sit or lie down comfortably.",
+      "Close Your Eyes: This helps to focus on internal imagery.",
+      "Imagine a Peaceful Scene: Visualize a calming place, such as a beach, forest, or meadow.",
+      "Engage the Senses: Imagine the details of the scene, such as the sound of waves, the smell of fresh pine, or the warmth of the sun.",
+      "Stay in the Scene: Spend 10 minutes immersed in this visualization, allowing yourself to feel relaxed and at ease.",
+      "Return Gradually: Slowly bring your awareness back to the present moment and open your eyes."
+    ]
+  },
+  {
+    "id": 8,
+    "name": "SMART Goal Setting",
+    "description": "A goal-setting technique that helps you set Specific, Measurable, Achievable, Relevant, and Time-bound goals.",
+    "type": "Goal Setting",
+    "duration": "15 minutes",
+    "helpsWith": "Procrastination, Lack of Motivation, Anxiety",
+    "steps": [
+      "Define a Specific Goal: Clearly state what you want to achieve (e.g., 'Exercise for 30 minutes a day').",
+      "Make it Measurable: Determine how you will measure your progress (e.g., track daily exercise duration).",
+      "Ensure it is Achievable: Set a realistic goal considering your current situation and resources.",
+      "Check Relevance: Ensure the goal aligns with your broader objectives and values.",
+      "Set a Time Frame: Establish a deadline or time frame for achieving your goal (e.g., 'In the next 4 weeks').",
+      "Create an Action Plan: Break down the goal into smaller tasks and set milestones to track progress.",
+      "Review and Adjust: Regularly review your progress and adjust the plan as necessary to stay on track."
+    ]
+  }
+]

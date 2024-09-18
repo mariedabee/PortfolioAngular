@@ -1,1 +1,25 @@
-<p>exercises works!</p>
+
+<div *ngIf="exercises.length > 0">
+  <h2>Available Exercises</h2>
+  <ul>
+    <li *ngFor="let exercise of exercises">
+      <h3>{{ exercise.name }}</h3>
+      <p>{{ exercise.description }}</p>
+      <p><strong>Type:</strong> {{ exercise.type }}</p>
+      <p><strong>Duration:</strong> {{ exercise.duration }}</p>
+      <p><strong>Helps with:</strong> {{ exercise.helpsWith }}</p>
+
+      <div *ngIf="exercise.steps.length > 0">
+        <h4>Available Steps:</h4>
+        <ul>
+          <li *ngFor="let step of exercise.steps">
+            {{ step }}
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
+<div *ngIf="exercises.length === 0">
+  <p>No exercises available.</p>
+</div>
