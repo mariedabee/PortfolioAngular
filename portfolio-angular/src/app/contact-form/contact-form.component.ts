@@ -1,21 +1,38 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
+/**
+ * Component for displaying and handling a contact form.
+ * Allows users to submit contact information which is sent to a backend server.
+ */
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss'],
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, HttpClientModule], // Add necessary modules
+  imports: [ReactiveFormsModule, CommonModule, HttpClientModule],
 })
 export class ContactFormComponent implements OnInit {
-  contactForm!: FormGroup; // Use non-null assertion operator
+  contactForm!: FormGroup; 
+  private readonly apiUrl = 'http://localhost:4000/api/send-contact-email';  
 
   constructor(private fb: FormBuilder, private http: HttpClient) {}
 
   ngOnInit(): void {
+    this.initializeForm();
+  }
+
+  /**
+   * Initializes the contact form with form controls and validators.
+   */
+  private initializeForm(): void {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -23,26 +40,23 @@ export class ContactFormComponent implements OnInit {
     });
   }
 
-  submitForm() {
+  /**
+   * Submits the form data to the backend server.
+   * If the form is valid, the data is sent to the server and the form is reset.
+   */
+  submitForm(): void {
     if (this.contactForm.valid) {
-      this.http
-        .post<any>(
-          'http://localhost:4000/api/send-contact-email',
-          this.contactForm.value
-        )
-        .subscribe(
-          (response) => {
-            console.log('Email sent:', response);
-            // reset the form
-            this.contactForm.reset();
-          },
-          (error) => {
-            console.error('Error sending email:', error);
-            // Handle error
-          }
-        );
+      this.http.post<any>(this.apiUrl, this.contactForm.value).subscribe({
+        next: (response) => {
+          console.log('Email sent:', response);
+          this.contactForm.reset(); // Reset the form on successful submission
+        },
+        error: (error) => {
+          console.error('Error sending email:', error);
+        },
+      });
     } else {
-      // Handle form errors
+      console.log('Form is invalid. Please check the fields.');
     }
   }
 }

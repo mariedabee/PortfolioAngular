@@ -5,17 +5,26 @@ import { LocationService } from '../../services/location.service';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 
+/**
+ * Component for providing assistance options based on the user's location.
+ * Displays local emergency hotlines and provides navigation to self-help resources.
+ */
 @Component({
   selector: 'app-need-help',
   standalone: true,
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule, HttpClientModule, RouterModule],
   templateUrl: './need-help.component.html',
   styleUrls: ['./need-help.component.scss'],
 })
 export class NeedHelpComponent implements OnInit {
-  constructor(private router: Router) {}
-
+  /**
+   * Stores the user's current location country code.
+   */
   location: string = '';
+
+  /**
+   * Object mapping country codes to their respective emergency hotlines.
+   */
   hotlines: { [key: string]: string } = {
     US: '1-800-273-TALK (8255)',
     UK: '116 123',
@@ -27,12 +36,24 @@ export class NeedHelpComponent implements OnInit {
     NL: '0900 0767', // Netherlands
     BE: '1813', // Belgium
   };
+
+  /**
+   * Stores the emergency hotline for the user's current location.
+   */
   hotline: string = '';
 
-  // Use inject function to resolve dependencies in standalone components
+  /**
+   * Use the `inject` function to resolve dependencies in standalone components.
+   */
   private geolocationService = inject(GeolocationService);
   private locationService = inject(LocationService);
 
+  constructor(private router: Router) {}
+
+  /**
+   * Lifecycle hook that is called after the component has been initialized.
+   * Retrieves the user's current location and updates the hotline based on the location.
+   */
   ngOnInit(): void {
     this.geolocationService.getPosition().then((pos: GeolocationPosition) => {
       const { latitude, longitude } = pos.coords;
@@ -47,12 +68,16 @@ export class NeedHelpComponent implements OnInit {
     });
   }
 
-  // Method to navigate programmatically to the book recommendations page
+  /**
+   * Navigates to the book recommendations page for self-help resources.
+   */
   goToBookRecommendations(): void {
     this.router.navigate(['/self-help-book-recommendation']);
   }
 
-  // Method to navigate to self-help exercises
+  /**
+   * Navigates to the self-help exercises page.
+   */
   goToSelfHelpExercises(): void {
     this.router.navigate(['/self-help-excercises']);
   }
