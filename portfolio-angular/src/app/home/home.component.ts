@@ -1,21 +1,32 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
-
-import { MentalHealthCardComponent } from "./mental-health-card/mental-health-card.component";
+import { MentalHealthCardComponent } from './mental-health-card/mental-health-card.component';
 import { CommonModule } from '@angular/common';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  imports: [SearchBarComponent, MentalHealthCardComponent, CommonModule], // Import standalone components here
-  standalone: true, // This line tells Angular that this component is standalone
+  imports: [
+    SearchBarComponent,
+    MentalHealthCardComponent,
+    CommonModule,
+    TranslateModule,
+  ],
+  standalone: true,
 })
 export class HomeComponent {
   mentalHealthIssues: any[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private translate: TranslateService) {
+    this.translate.setDefaultLang('en');
+  }
+
+  switchLanguage(language: string) {
+    this.translate.use(language);
+  }
 
   performSearch(term: string) {
     this.http

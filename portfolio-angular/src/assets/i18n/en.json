@@ -1,0 +1,12 @@
+{
+  "HOME": {
+    "TITLE": "Welcome to the Home Page"
+  },
+  "ABOUT": "About",
+  "CONTACT": "Contact",
+  "NEED_HELP": "Need Help?",
+  "SUGGESTION_BOX": "Suggestion Box",
+  "LOGIN": "Login",
+  "SIGN_UP": "Sign Up", 
+  "HELLO": "Hello, welcome to our site!"
+}

@@ -1,6 +1,12 @@
 <!-- home component html -->
 <div class="home-container">
   <app-search-bar class="search-bar" (search)="performSearch($event)"></app-search-bar>
+  
+  <h1>{{ 'HOME.TITLE' | translate }}</h1>
+<button (click)="switchLanguage('en')">English</button>
+<button (click)="switchLanguage('de')">Deutsch</button>
+
+
   <div class="home-main-content">
     <div class="card-container">
       <div *ngFor="let issue of mentalHealthIssues">

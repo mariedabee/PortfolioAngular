@@ -4,12 +4,22 @@ import { importProvidersFrom } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { routes } from './app/app.routes';
-import { provideHttpClient, withFetch } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { HttpLoaderFactory } from './app.module';
 
 bootstrapApplication(AppComponent, {
   providers: [
     importProvidersFrom(HttpClientModule),
     importProvidersFrom(RouterModule.forRoot(routes)),
-    provideHttpClient(withFetch()),
+    importProvidersFrom(
+      TranslateModule.forRoot({
+        loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient],
+        },
+      })
+    ),
   ],
 }).catch((err) => console.error(err));
