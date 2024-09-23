@@ -1,15 +1,26 @@
+import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TranslationModule } from '../translation.module';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule],
+  imports: [HttpClientModule, CommonModule, TranslationModule],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.scss',
+  styleUrls: ['./about.component.scss'],
 })
-export class AboutComponent {
+export class AboutComponent implements OnInit {
+  constructor(private translate: TranslateService) {
+    const newLang = this.translate.getBrowserLang() || 'en';
+    this.translate.use(newLang);
+  }
+
   ngOnInit() {
-    console.log('AboutComponent initialized');
+    const storedLanguage = localStorage.getItem('selectedLanguage');
+    if (storedLanguage) {
+      this.translate.use(storedLanguage);
+    }
   }
 }

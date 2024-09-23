@@ -9,5 +9,8 @@
     "SUGGESTIONBOX": "Suggestion Box",
     "LOGIN": "Login",
     "SIGNUP": "Sign Up"
+  },
+  "ABOUT":{
+    "TITLE":"About us"
   }
 }

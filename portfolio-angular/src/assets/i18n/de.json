@@ -10,5 +10,8 @@
     "SUGGESTIONBOX": "Vorschlagsbox",
     "LOGIN": "Anmelden",
     "SIGNUP": "Registrieren"
+  }, 
+  "ABOUT":{
+    "TITLE":"Über uns"
   }
 }
