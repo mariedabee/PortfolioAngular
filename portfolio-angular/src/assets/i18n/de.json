@@ -13,5 +13,23 @@
   }, 
   "ABOUT":{
     "TITLE":"Über uns"
+  },
+   "LOGIN": {
+    "TITLE": "Anmelden",
+    "DESCRIPTION": "Melden Sie sich mit Ihren Zugangsdaten an.",
+    "EMAIL_PLACEHOLDER": "E-Mail",
+    "PASSWORD_PLACEHOLDER": "Passwort",
+    "SUBMIT_BUTTON": "Anmelden",
+    "SIGN_UP_BUTTON": "Haben Sie noch kein Konto? Registrieren Sie sich"
+  },
+  "SIGNUP": {
+    "TITLE": "Registrieren",
+    "DESCRIPTION": "Erstellen Sie ein neues Konto, indem Sie die Informationen unten ausfüllen.",
+    "USERNAME_PLACEHOLDER": "Benutzername",
+    "EMAIL_PLACEHOLDER": "E-Mail",
+    "PASSWORD_PLACEHOLDER": "Passwort",
+    "CONFIRM_PASSWORD_PLACEHOLDER": "Passwort bestätigen",
+    "SUBMIT_BUTTON": "Registrieren",
+    "LOGIN_BUTTON": "Haben Sie bereits ein Konto? Einloggen"
   }
 }

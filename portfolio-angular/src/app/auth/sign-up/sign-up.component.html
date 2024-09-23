@@ -1,14 +1,14 @@
 <div class="background">
   <div class="signup-box">
-    <h2>Sign Up</h2>
-    <p class="description">Create a new account by filling out the information below.</p>
+    <h2>{{ "SIGNUP.TITLE" | translate }}</h2>
+    <p class="description">{{ "SIGNUP.DESCRIPTION" | translate }}</p>
     <form>
-      <input type="text" placeholder="Username" required>
-      <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Password" required>
-      <input type="password" placeholder="Confirm Password" required>
-      <button type="submit">Sign Up</button>
-      <button type="button" class="otherButton">Already have an account? Login</button>
+      <input type="text" placeholder="{{ 'SIGNUP.USERNAME_PLACEHOLDER' | translate }}" required>
+      <input type="email" placeholder="{{ 'SIGNUP.EMAIL_PLACEHOLDER' | translate }}" required>
+      <input type="password" placeholder="{{ 'SIGNUP.PASSWORD_PLACEHOLDER' | translate }}" required>
+      <input type="password" placeholder="{{ 'SIGNUP.CONFIRM_PASSWORD_PLACEHOLDER' | translate }}" required>
+      <button type="submit">{{ 'SIGNUP.SUBMIT_BUTTON' | translate }}</button>
+      <button type="button" class="otherButton">{{ 'SIGNUP.LOGIN_BUTTON' | translate }}</button>
     </form>
   </div>
 </div>

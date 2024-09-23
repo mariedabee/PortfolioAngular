@@ -12,5 +12,23 @@
   },
   "ABOUT":{
     "TITLE":"About us"
+  },
+  "LOGIN": {
+    "TITLE": "Log In",
+    "DESCRIPTION": "Log in to your account using your credentials.",
+    "EMAIL_PLACEHOLDER": "Email",
+    "PASSWORD_PLACEHOLDER": "Password",
+    "SUBMIT_BUTTON": "Login",
+    "SIGN_UP_BUTTON": "Don't have an account? Sign Up"
+  },
+  "SIGNUP": {
+    "TITLE": "Sign Up",
+    "DESCRIPTION": "Create a new account by filling out the information below.",
+    "USERNAME_PLACEHOLDER": "Username",
+    "EMAIL_PLACEHOLDER": "Email",
+    "PASSWORD_PLACEHOLDER": "Password",
+    "CONFIRM_PASSWORD_PLACEHOLDER": "Confirm Password",
+    "SUBMIT_BUTTON": "Sign Up",
+    "LOGIN_BUTTON": "Already have an account? Login"
   }
 }

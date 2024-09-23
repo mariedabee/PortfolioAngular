@@ -1,12 +1,12 @@
 <div class="background">
   <div class="login-box">
-    <h2>Login</h2>
-    <p class="description">Log in to your account using your credentials.</p>
+    <h2>{{ "LOGIN.TITLE" | translate }}</h2>
+    <p class="description">{{ "LOGIN.DESCRIPTION" | translate }}</p>
     <form>
-      <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Password" required>
-      <button type="submit">Login</button>
-      <button type="button" class="otherButton">Don't have an account? Sign Up</button>
+      <input type="email" placeholder="{{ 'LOGIN.EMAIL_PLACEHOLDER' | translate }}" required>
+      <input type="password" placeholder="{{ 'LOGIN.PASSWORD_PLACEHOLDER' | translate }}" required>
+      <button type="submit">{{ 'LOGIN.SUBMIT_BUTTON' | translate }}</button>
+      <button type="button" class="otherButton">{{ 'LOGIN.SIGN_UP_BUTTON' | translate }}</button>
     </form>
   </div>
 </div>
