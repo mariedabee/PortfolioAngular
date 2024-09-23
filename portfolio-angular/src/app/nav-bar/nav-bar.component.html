@@ -1,14 +1,29 @@
 <nav class="cloudy-navbar">
   <ul>
-    <li><a routerLink="/home">Home</a></li>
-    <li><a routerLink="/about">About</a></li>
-    <li><a routerLink="/contact">Contact</a></li>
-    <li><a routerLink="/self-help-emergency">Need Help?</a></li>
-    <li><a routerLink="/suggestion-box">Suggestion Box</a></li>
+    <li>
+      <a routerLink="/home">{{ "NAV.HOME" | translate }}</a>
+    </li>
+    <li>
+      <a routerLink="/about">{{ "NAV.ABOUT" | translate }}</a>
+    </li>
+    <li>
+      <a routerLink="/contact">{{ "NAV.CONTACT" | translate }}</a>
+    </li>
+    <li>
+      <a routerLink="/self-help-emergency">{{ "NAV.NEEDHELP" | translate }}</a>
+    </li>
+    <li>
+      <a routerLink="/suggestion-box">{{ "NAV.SUGGESTIONBOX" | translate }}</a>
+    </li>
   </ul>
 
   <div class="auth-links">
-    <a routerLink="/login">Login</a>
-    <a routerLink="/signup">Sign Up</a>
+    <a routerLink="/login">{{ "NAV.LOGIN" | translate }}</a>
+    <a routerLink="/signup">{{ "NAV.SIGNUP" | translate }}</a>
+  </div>
+
+  <div class="auth-links">
+    <a (click)="switchLanguage('en')">English</a>
+    <a (click)="switchLanguage('de')">Deutsch</a>
   </div>
 </nav>

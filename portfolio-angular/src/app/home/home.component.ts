@@ -24,10 +24,6 @@ export class HomeComponent {
     this.translate.setDefaultLang('en');
   }
 
-  switchLanguage(language: string) {
-    this.translate.use(language);
-  }
-
   performSearch(term: string) {
     this.http
       .get<any[]>(`http://localhost:4000/api/mental-illnesses?search=${term}`)
