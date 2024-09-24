@@ -1,0 +1,111 @@
+// Color Variables
+$background-color: #3333334f;
+$text-color: #f5f5f5;
+$button-gradient: linear-gradient(135deg, #a2c2e6, #f3e6f5);
+$other-button-gradient: linear-gradient(135deg, #6f849c, #8f8890);
+$button-text-color: #9e9d9d;
+$other-button-text-color: #585858;
+$border-color: #444;
+$placeholder-color: #545454;
+$description-color: #545454;
+$alert-background: #444; // Darker background for emergency section
+
+// Main Container Styling
+.need-help-container {
+    background-color: $background-color;
+    color: $text-color;
+    max-width: 800px;
+    margin: 0 auto; // Centers the container horizontally
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif; // Ensure consistent font family
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; // Ensures the container takes full viewport height
+    margin-top: 5%;
+}
+
+// Exercise List Styling
+.exercise-list {
+    width: 100%; // Full width for the list
+    padding: 0; // Remove default padding
+    margin-top: 20px; // Space above the list
+
+    li {
+        list-style: none; // Remove default bullets
+        margin-bottom: 20px; // Space between exercises
+    }
+}
+
+// Styling for individual exercise boxes
+.exercise-box {
+    background-color: darken($background-color, 5%); // Slightly darker background for contrast
+    border: 1px solid $border-color; // Border for separation
+    border-radius: 8px; // Rounded corners
+    padding: 20px; // Padding inside each exercise box
+    transition: transform 0.2s; // Animation on hover
+
+    &:hover {
+        transform: scale(1.02); // Slightly enlarge on hover
+    }
+
+    h3 {
+        margin: 0; // Remove default margin
+        color: $text-color;
+        font-size: 1.5em; // Larger font size for exercise names
+    }
+
+    p {
+        margin: 5px 0; // Space between paragraphs
+        color: $description-color;
+    }
+
+    // Steps styling inside exercise box
+    .self-help-options {
+        margin-top: 15px; // Space above the steps
+
+        h4 {
+            margin-bottom: 10px; // Space below the steps title
+        }
+
+        ul {
+            padding: 0; // Remove default padding for inner list
+            list-style: none; // Remove default bullets
+
+            li {
+                position: relative; // Positioning for custom bullets
+                margin-bottom: 8px; // Spacing between list items
+
+                &::before {
+                    content: ''; // Empty content for custom bullet
+                    position: absolute; // Absolute positioning
+                    left: -20px; // Adjust left position
+                    top: 50%; // Center vertically
+                    transform: translateY(-50%); // Center adjustment
+                    width: 8px; // Custom bullet size
+                    height: 8px; // Custom bullet size
+                    border-radius: 50%; // Make it circular
+                    background-color: $button-gradient; // Use gradient color
+                }
+            }
+        }
+    }
+}
+
+// Responsive adjustments for smaller screens
+@media (max-width: 600px) {
+    .need-help-container {
+        padding: 20px;
+    }
+
+    .exercise-box {
+        padding: 15px; // Adjust padding for smaller screens
+    }
+
+    h3 {
+        font-size: 1.4em; // Adjust font size for smaller screens
+    }
+}

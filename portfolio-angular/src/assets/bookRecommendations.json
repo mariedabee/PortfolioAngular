@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "The Power of Now",
+    "author": "Eckhart Tolle",
+    "description": "A guide to spiritual enlightenment and living in the present moment.",
+    "topics": ["Mindfulness", "Spirituality", "Presence"],
+    "review": "A transformative book that helps you understand the importance of living in the now, letting go of past and future worries."
+  },
+  {
+    "id": 2,
+    "title": "Feeling Good: The New Mood Therapy",
+    "author": "David D. Burns",
+    "description": "A classic self-help book that teaches cognitive behavioral techniques to combat depression.",
+    "topics": ["Cognitive Behavioral Therapy", "Depression", "Self-Help"],
+    "review": "Offers practical techniques to help overcome negative thoughts and feelings, making it a valuable resource for anyone struggling with depression."
+  },
+  {
+    "id": 3,
+    "title": "The Gifts of Imperfection",
+    "author": "Brené Brown",
+    "description": "Encourages embracing vulnerability and imperfections to cultivate self-worth.",
+    "topics": ["Self-Compassion", "Vulnerability", "Personal Growth"],
+    "review": "A heartfelt guide that encourages readers to let go of the need for perfection and embrace their authentic selves."
+  },
+  {
+    "id": 4,
+    "title": "Mind Over Mood",
+    "author": "Dennis Greenberger & Christine A. Padesky",
+    "description": "A practical guide to cognitive therapy that helps manage moods through specific exercises.",
+    "topics": ["Cognitive Behavioral Therapy", "Emotional Regulation", "Mood Management"],
+    "review": "Provides clear exercises and tools to help individuals understand their emotions and change their moods effectively."
+  },
+  {
+    "id": 5,
+    "title": "The Body Keeps the Score",
+    "author": "Bessel van der Kolk",
+    "description": "Explores how trauma affects the body and mind, offering innovative treatments.",
+    "topics": ["Trauma", "Healing", "Mental Health"],
+    "review": "An eye-opening read on the effects of trauma and various healing methods, essential for understanding the connection between mind and body."
+  }
+]

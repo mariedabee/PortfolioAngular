@@ -1,3 +1,28 @@
-<p>
-    rgrtet
-    </p>
+<div class="book-recommendations-container" *ngIf="books.length > 0">
+  <h2 class="recommendations-title">
+    {{ "BOOK_RECOMMENDATIONS.TITLE" | translate }}
+  </h2>
+  <ul>
+    <li *ngFor="let book of books" class="book-item">
+      <h3>{{ book.title }} by {{ book.author }}</h3>
+      <p>
+        <strong
+          >{{ "BOOK_RECOMMENDATIONS.DESCRIPTION_LABEL" | translate }}:</strong
+        >
+        {{ book.description }}
+      </p>
+      <p>
+        <strong>{{ "BOOK_RECOMMENDATIONS.TOPICS_LABEL" | translate }}:</strong>
+        {{ book.topics.join(", ") }}
+      </p>
+      <p>
+        <strong>{{ "BOOK_RECOMMENDATIONS.REVIEW_LABEL" | translate }}:</strong>
+        {{ book.review }}
+      </p>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="books.length === 0" class="no-books-message">
+  <p>{{ "BOOK_RECOMMENDATIONS.NO_BOOKS_MESSAGE" | translate }}</p>
+</div>

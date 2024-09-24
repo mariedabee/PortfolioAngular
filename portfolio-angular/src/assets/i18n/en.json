@@ -73,5 +73,12 @@
     "SELF_HELP_DESCRIPTION": "If you're looking for additional resources, here are some options:",
     "SELF_HELP_BUTTON": "Self Help Exercises",
     "BOOK_RECOMMENDATIONS_BUTTON": "Book Recommendations"
+  },
+  "BOOK_RECOMMENDATIONS": {
+    "TITLE": "Book Recommendations",
+    "DESCRIPTION_LABEL": "Description",
+    "TOPICS_LABEL": "Topics",
+    "REVIEW_LABEL": "Review",
+    "NO_BOOKS_MESSAGE": "No book recommendations available at this time."
   }
 }

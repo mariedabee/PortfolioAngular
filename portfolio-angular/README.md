@@ -1,33 +1,97 @@
-# PortfolioAngular
+## Adding Exercises Data
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
+Create a file named exercises.json in your project's assets directory and paste the JSON data into it.
+To populate the exercises in the application, you need to provide a JSON array containing the exercise details. Below is the structure for each exercise entry:
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```json
+{
+  "id": <number>, // Unique identifier for the exercise
+  "name": "<string>", // Name of the exercise
+  "description": "<string>", // Brief description of the exercise
+  "type": "<string>", // Type of exercise (e.g., Mindfulness, CBT, Journaling)
+  "duration": "<string>", // Duration of the exercise (e.g., "5 minutes")
+  "helpsWith": "<string>", // List of issues the exercise helps with
+  "steps": [ // Array of steps to perform the exercise
+    "<string>", // Each step as a string
+    ...
+  ]
+}
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Excersises Examples
+[
+  {
+    "id": 1,
+    "name": "Mindfulness Breathing",
+    "description": "A breathing exercise to help calm the mind and reduce anxiety by focusing on deep, slow breathing.",
+    "type": "Mindfulness",
+    "duration": "5 minutes",
+    "helpsWith": "Anxiety, Stress, Emotional Regulation",
+    "steps": [
+      "Find a Comfortable Position: Sit or lie down in a comfortable position.",
+      "Close Your Eyes: This helps reduce distractions and increases focus.",
+      "Breathe In Slowly: Inhale deeply through your nose for a count of 4, feeling your belly expand.",
+      "Hold Your Breath: Hold your breath for a count of 4.",
+      "Breathe Out Slowly: Exhale slowly through your mouth for a count of 6, letting go of any tension.",
+      "Repeat: Continue this cycle for 5 minutes, focusing solely on your breath and the sensation of air entering and leaving your body.",
+      "Finish: Slowly open your eyes, take a moment to notice how you feel, and gradually transition back to your day."
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Thought Recording",
+    "description": "A CBT exercise designed to identify and challenge negative thought patterns.",
+    "type": "CBT",
+    "duration": "10 minutes",
+    "helpsWith": "Depression, Anxiety, Negative Thought Patterns",
+    "steps": [
+      "Identify Negative Thoughts: When you notice a negative thought, write it down in a journal.",
+      "Record the Situation: Note the situation or event that triggered this thought.",
+      "Examine the Thought: Identify any cognitive distortions (e.g., all-or-nothing thinking, overgeneralization).",
+      "Challenge the Thought: Ask yourself questions to challenge the validity of the thought (e.g., 'What evidence do I have that supports or contradicts this thought?').",
+      "Replace with Balanced Thought: Write down a more balanced or realistic thought that counteracts the negative one.",
+      "Reflect: Note how you feel after challenging the thought and replacing it with a more balanced perspective.",
+      "Repeat: Practice this regularly to help shift your thought patterns over time."
+    ]
+  }
+  // Additional exercises can be added in the same format
+]
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Book Recommendations
 
-## Running end-to-end tests
+## Create a JSON File for Book Data: Create a file named books.json in the assets folder with the following example data:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### json
 
-## Adding a new component
+[
+  {
+    "id": 1,
+    "title": "The Power of Now",
+    "author": "Eckhart Tolle",
+    "description": "A guide to spiritual enlightenment and living in the present moment.",
+    "topics": ["Mindfulness", "Spirituality", "Presence"],
+    "review": "A transformative book that helps you understand the importance of living in the now, letting go of past and future worries."
+  },
+  {
+    "id": 2,
+    "title": "Feeling Good: The New Mood Therapy",
+    "author": "David D. Burns",
+    "description": "A classic self-help book that teaches cognitive behavioral techniques to combat depression.",
+    "topics": ["Cognitive Behavioral Therapy", "Depression", "Self-Help"],
+    "review": "Offers practical techniques to help overcome negative thoughts and feelings, making it a valuable resource for anyone struggling with depression."
+  },
+  {
+    "id": 3,
+    "title": "The Gifts of Imperfection",
+    "author": "Brené Brown",
+    "description": "Encourages embracing vulnerability and imperfections to cultivate self-worth.",
+    "topics": ["Self-Compassion", "Vulnerability", "Personal Growth"],
+    "review": "A heartfelt guide that encourages readers to let go of the need for perfection and embrace their authentic selves."
+  }
+  // Add more book entries as needed
+]
 
-f.e. To add the MentalHealthComponentComponent to your Angular app and display it, you need to follow these steps:
-
-    Import the component in the module where you want to use it. Typically, this is the AppModule (app.module.ts / app.component.ts).
-
-    Declare the component in the declarations/imports array of the module/component.
-
-    Use the selector of the component (app-mental-health) in the HTML template of the parent component (usually app.component.html).
