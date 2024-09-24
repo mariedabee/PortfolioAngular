@@ -1,20 +1,55 @@
-.home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Center the content horizontally */
-}
+// About Us Page Styles
 
-.home-main-content {
-    width: 100%;
-    /* Full width of the available space */
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    /* Center the content horizontally */
-}
+.container {
+    max-width: 800px; // Maximum width for large screens
+    margin: 0 auto; // Center the container
+    padding: 20px; // Padding around the container
+    font-family: 'Roboto', sans-serif; // Use the same font as Exercises page
+    color: #333; // Dark text color for readability
+    line-height: 1.6; // Line height for better readability
 
-.search-bar {
-    width: 100%;
+    h1 {
+        font-size: 2.5em; // Size for main title
+        text-align: center; // Center the main title
+        margin-bottom: 20px; // Space below the title
+        color: #4a91e2ce; // Main title color
+    }
+
+    h2 {
+        font-size: 2em; // Size for subheadings
+        margin-top: 30px; // Space above subheadings
+        margin-bottom: 15px; // Space below subheadings
+        color: #333; // Subheading color
+    }
+
+    p {
+        font-size: 1.1em; // Font size for paragraphs
+        margin-bottom: 20px; // Space below paragraphs
+    }
+
+    ul {
+        list-style-type: disc; // Use disc bullets for lists
+        padding-left: 20px; // Indent list
+    }
+
+    li {
+        font-size: 1.1em; // Font size for list items
+        margin-bottom: 10px; // Space between list items
+    }
+
+    // Responsive Design
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 2em; // Smaller font size on small screens
+        }
+
+        h2 {
+            font-size: 1.5em; // Smaller font size for subheadings
+        }
+
+        p,
+        li {
+            font-size: 1em; // Smaller font size for paragraphs and list items
+        }
+    }
 }

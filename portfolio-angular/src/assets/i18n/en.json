@@ -10,9 +10,6 @@
     "LOGIN": "Login",
     "SIGNUP": "Sign Up"
   },
-  "ABOUT":{
-    "TITLE":"About us"
-  },
   "LOGIN": {
     "TITLE": "Log In",
     "DESCRIPTION": "Log in to your account using your credentials.",
@@ -80,5 +77,24 @@
     "TOPICS_LABEL": "Topics",
     "REVIEW_LABEL": "Review",
     "NO_BOOKS_MESSAGE": "No book recommendations available at this time."
+  },
+  "ABOUT": {
+    "TITLE": "About Us",
+    "INTRODUCTION": "Welcome to [App Name], where we understand that the journey to mental wellness can often feel overwhelming, especially during long waiting times for therapy. We are committed to creating a supportive community that makes this journey a little easier.",
+    "MISSION": "Our Mission",
+    "MISSION_CONTENT": "At [App Name], our mission is to provide resources and support for those struggling with mental health challenges. We believe that no one should feel alone during difficult times. Our platform is designed to foster connections, facilitate understanding, and empower individuals to take charge of their mental health.",
+    "OFFERINGS": "What We Offer",
+    "OFFERINGS_CONTENT": "Our platform provides a curated list of exercises designed to help you manage stress, anxiety, and depression. Connect with others in our supportive group therapy sessions. Share experiences, gain insights, and build a network of understanding and encouragement.",
+    "COMMUNITY_IMPORTANCE": "Why Community Matters",
+    "COMMUNITY_IMPORTANCE_CONTENT": "The power of community cannot be understated. Connecting with others who share similar experiences can help reduce feelings of isolation and provide a sense of belonging. At [App Name], we strive to create a space where everyone feels heard and supported.",
+    "FUTURE_FEATURES": "Future Features",
+    "FUTURE_FEATURE_1": "Personalized Wellness Plans",
+    "FUTURE_FEATURE_2": "Live Workshops and Webinars",
+    "FUTURE_FEATURE_3": "Peer Support Groups",
+    "FUTURE_FEATURE_4": "Resource Library",
+    "FUTURE_FEATURE_5": "Progress Tracking",
+    "GET_INVOLVED": "Get Involved",
+    "GET_INVOLVED_CONTENT": "We invite you to join our community and be part of our mission. Together, we can make a difference in each other’s lives. Sign up today and start your journey toward better mental health."
   }
+
 }
