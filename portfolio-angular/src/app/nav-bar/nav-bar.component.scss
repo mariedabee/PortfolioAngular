@@ -68,3 +68,23 @@
         padding: 8px 16px;
     }
 }
+
+.flag-link {
+    padding: 0;
+    /* Remove any padding */
+    margin-left: 5px;
+    /* Adjust left margin as needed */
+}
+
+.flag-icon {
+    width: 24px;
+    /* Adjust the size as needed */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.flag-icon:hover {
+    transform: scale(1.1);
+    /* Slight zoom effect on hover */
+}

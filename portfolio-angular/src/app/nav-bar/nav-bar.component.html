@@ -22,8 +22,16 @@
     <a routerLink="/signup">{{ "NAV.SIGNUP" | translate }}</a>
   </div>
 
-  <div class="auth-links">
-    <a (click)="switchLanguage('en')">English</a>
-    <a (click)="switchLanguage('de')">Deutsch</a>
+  <div>
+    <a (click)="switchLanguage('en')" class="flag-link">
+      <img src="assets/flags/uk-flag.png" alt="English" class="flag-icon" />
+    </a>
+    <a (click)="switchLanguage('de')" class="flag-link">
+      <img
+        src="assets/flags/germany-flag.png"
+        alt="Deutsch"
+        class="flag-icon"
+      />
+    </a>
   </div>
 </nav>
