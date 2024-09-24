@@ -1,16 +1,15 @@
-
 <div *ngIf="exercises.length > 0">
-  <h2>Available Exercises</h2>
+  <h2>{{ 'EXERCISES.TITLE' | translate }}</h2>
   <ul>
     <li *ngFor="let exercise of exercises">
       <h3>{{ exercise.name }}</h3>
       <p>{{ exercise.description }}</p>
-      <p><strong>Type:</strong> {{ exercise.type }}</p>
-      <p><strong>Duration:</strong> {{ exercise.duration }}</p>
-      <p><strong>Helps with:</strong> {{ exercise.helpsWith }}</p>
+      <p><strong>{{ 'EXERCISES.TYPE_LABEL' | translate }}:</strong> {{ exercise.type }}</p>
+      <p><strong>{{ 'EXERCISES.DURATION_LABEL' | translate }}:</strong> {{ exercise.duration }}</p>
+      <p><strong>{{ 'EXERCISES.HELPS_WITH_LABEL' | translate }}:</strong> {{ exercise.helpsWith }}</p>
 
       <div *ngIf="exercise.steps.length > 0">
-        <h4>Available Steps:</h4>
+        <h4>{{ 'EXERCISES.STEPS_TITLE' | translate }}</h4>
         <ul>
           <li *ngFor="let step of exercise.steps">
             {{ step }}
@@ -21,5 +20,5 @@
   </ul>
 </div>
 <div *ngIf="exercises.length === 0">
-  <p>No exercises available.</p>
+  <p>{{ 'EXERCISES.NO_EXERCISES_MESSAGE' | translate }}</p>
 </div>

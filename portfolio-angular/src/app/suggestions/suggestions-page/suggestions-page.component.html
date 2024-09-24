@@ -1,6 +1,6 @@
 <div class="background">
   <div class="suggestions-container">
-    <h2>Community Suggestions</h2>
+    <h2>{{ 'SUGGESTIONS.TITLE' | translate }}</h2>
     <div *ngFor="let suggestion of suggestions" class="suggestion-card">
       <div class="suggestion-content">
         <p>{{ suggestion.suggestion }}</p>
@@ -12,7 +12,7 @@
         </button>
       </div>
       <div class="comments-section">
-        <h3>Comments</h3>
+        <h3>{{ 'SUGGESTIONS.COMMENTS_TITLE' | translate }}</h3>
         <div *ngFor="let comment of suggestion.comments" class="comment">
           <p>{{ comment.text }}</p>
           <small>{{ comment.createdAt }}</small>
@@ -22,10 +22,10 @@
             name="comment"
             [(ngModel)]="suggestion.newComment"
             required
-            placeholder="Enter your comment..."
+            placeholder="{{ 'SUGGESTIONS.COMMENT_PLACEHOLDER' | translate }}"
           ></textarea>
           <button type="submit" [disabled]="!commentForm.form.valid">
-            Add Comment
+            {{ 'SUGGESTIONS.ADD_COMMENT_BUTTON' | translate }}
           </button>
         </form>
       </div>

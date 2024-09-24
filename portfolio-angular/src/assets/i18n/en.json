@@ -30,5 +30,48 @@
     "CONFIRM_PASSWORD_PLACEHOLDER": "Confirm Password",
     "SUBMIT_BUTTON": "Sign Up",
     "LOGIN_BUTTON": "Already have an account? Login"
+  },
+  "CONTACT": {
+    "NAME_LABEL": "Name",
+    "NAME_REQUIRED": "Name is required.",
+    "EMAIL_LABEL": "Email",
+    "EMAIL_REQUIRED": "Email is required.",
+    "EMAIL_INVALID": "Invalid email format.",
+    "MESSAGE_LABEL": "Message",
+    "MESSAGE_REQUIRED": "Message is required.",
+    "SUBMIT_BUTTON": "Submit"
+  },
+  "SEARCH": {
+    "PLACEHOLDER": "Search for mental health issues..."
+  },
+  "SUGGESTIONS": {
+    "TITLE": "Community Suggestions",
+    "COMMENTS_TITLE": "Comments",
+    "COMMENT_PLACEHOLDER": "Enter your comment...",
+    "ADD_COMMENT_BUTTON": "Add Comment"
+  },
+   "SUGGESTION_FORM": {
+    "TITLE": "Submit Your Suggestion",
+    "DESCRIPTION": "Your well-being matters to us. If you have ideas or suggestions on how we can improve our support and resources, please share them here. Your feedback helps us create a better experience and more effective resources for everyone. All suggestions are anonymous.",
+    "PLACEHOLDER": "Enter your suggestion here...",
+    "SUBMIT_BUTTON": "Submit",
+    "SEE_OTHER_BUTTON": "See other suggestions"
+  },
+  "EXERCISES": {
+    "TITLE": "Available Exercises",
+    "TYPE_LABEL": "Type",
+    "DURATION_LABEL": "Duration",
+    "HELPS_WITH_LABEL": "Helps with",
+    "STEPS_TITLE": "Available Steps",
+    "NO_EXERCISES_MESSAGE": "No exercises available."
+  },
+   "NEED_HELP": {
+    "TITLE": "Need Immediate Help?",
+    "ALERT_TEXT": "Please call the crisis hotline:",
+    "FETCHING_HOTLINE": "Fetching your location and the nearest crisis hotline...",
+    "SELF_HELP_TITLE": "Explore Self-Help Resources",
+    "SELF_HELP_DESCRIPTION": "If you're looking for additional resources, here are some options:",
+    "SELF_HELP_BUTTON": "Self Help Exercises",
+    "BOOK_RECOMMENDATIONS_BUTTON": "Book Recommendations"
   }
 }

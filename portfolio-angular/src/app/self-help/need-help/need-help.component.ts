@@ -1,9 +1,11 @@
+import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit, inject } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { GeolocationService } from '../../services/geolocation.service';
 import { LocationService } from '../../services/location.service';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
+import { TranslationModule } from '../../translation.module';
 
 /**
  * Component for providing assistance options based on the user's location.
@@ -12,7 +14,7 @@ import { Router, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-need-help',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, RouterModule],
+  imports: [CommonModule, HttpClientModule, RouterModule, TranslationModule],
   templateUrl: './need-help.component.html',
   styleUrls: ['./need-help.component.scss'],
 })
@@ -48,13 +50,21 @@ export class NeedHelpComponent implements OnInit {
   private geolocationService = inject(GeolocationService);
   private locationService = inject(LocationService);
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private translate: TranslateService) {
+    const newLang = this.translate.getBrowserLang() || 'en';
+    this.translate.use(newLang);
+  }
 
   /**
    * Lifecycle hook that is called after the component has been initialized.
    * Retrieves the user's current location and updates the hotline based on the location.
    */
   ngOnInit(): void {
+    const storedLanguage = localStorage.getItem('selectedLanguage');
+    if (storedLanguage) {
+      this.translate.use(storedLanguage);
+    }
+
     this.geolocationService.getPosition().then((pos: GeolocationPosition) => {
       const { latitude, longitude } = pos.coords;
       this.locationService

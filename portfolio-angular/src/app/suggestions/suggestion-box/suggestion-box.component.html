@@ -1,24 +1,21 @@
 <div class="background">
   <div class="suggestion-box">
-    <h2>Submit Your Suggestion</h2>
+    <h2>{{ 'SUGGESTION_FORM.TITLE' | translate }}</h2>
     <p class="description">
-      Your well-being matters to us. If you have ideas or suggestions on how we
-      can improve our support and resources, please share them here. Your
-      feedback helps us create a better experience and more effective resources
-      for everyone. All suggestions are anonymous.
+      {{ 'SUGGESTION_FORM.DESCRIPTION' | translate }}
     </p>
     <form (ngSubmit)="onSubmit()" #suggestionForm="ngForm">
       <textarea
         name="suggestion"
         [(ngModel)]="suggestion"
         required
-        placeholder="Enter your suggestion here..."
+        placeholder="{{ 'SUGGESTION_FORM.PLACEHOLDER' | translate }}"
       ></textarea>
       <button type="submit" [disabled]="!suggestionForm.form.valid">
-        Submit
+        {{ 'SUGGESTION_FORM.SUBMIT_BUTTON' | translate }}
       </button>
-      <button (click)="navigateToAnotherComponent()" class="otherButton" >
-        see other suggestions
+      <button (click)="navigateToAnotherComponent()" class="otherButton">
+        {{ 'SUGGESTION_FORM.SEE_OTHER_BUTTON' | translate }}
       </button>
     </form>
   </div>

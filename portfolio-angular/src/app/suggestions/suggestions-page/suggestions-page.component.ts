@@ -1,3 +1,4 @@
+import {  TranslateService } from '@ngx-translate/core';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -6,6 +7,7 @@ import {
   SuggestionService,
 } from '../../services/suggestion.service';
 import { CommonModule } from '@angular/common';
+import { TranslationModule } from '../../translation.module';
 
 /**
  * Component for displaying and interacting with suggestions.
@@ -14,7 +16,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-suggestions-page',
   standalone: true,
-  imports: [FormsModule, HttpClientModule, CommonModule],
+  imports: [FormsModule, HttpClientModule, CommonModule, TranslationModule],
   templateUrl: './suggestions-page.component.html',
   styleUrls: ['./suggestions-page.component.scss'],
 })
@@ -28,7 +30,13 @@ export class SuggestionsPageComponent {
    * Creates an instance of SuggestionsPageComponent.
    * @param suggestionService - Service for managing suggestions.
    */
-  constructor(private suggestionService: SuggestionService) {}
+  constructor(
+    private suggestionService: SuggestionService,
+    private translate: TranslateService
+  ) {
+    const newLang = this.translate.getBrowserLang() || 'en';
+    this.translate.use(newLang);
+  }
 
   /**
    * Lifecycle hook that is called after the component has been initialized.
@@ -36,6 +44,10 @@ export class SuggestionsPageComponent {
    */
   ngOnInit(): void {
     this.fetchSuggestions();
+    const storedLanguage = localStorage.getItem('selectedLanguage');
+    if (storedLanguage) {
+      this.translate.use(storedLanguage);
+    }
   }
 
   /**

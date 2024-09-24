@@ -1,8 +1,11 @@
+import { HttpClientModule } from '@angular/common/http';
+import { TranslateService } from '@ngx-translate/core';
 import { Component } from '@angular/core';
 import { SuggestionService } from '../../services/suggestion.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
+import { TranslationModule } from '../../translation.module';
 
 /**
  * Component for submitting suggestions via a form.
@@ -13,7 +16,7 @@ import { Router, RouterModule } from '@angular/router';
   standalone: true,
   templateUrl: './suggestion-box.component.html',
   styleUrls: ['./suggestion-box.component.scss'],
-  imports: [CommonModule, FormsModule, RouterModule],
+  imports: [CommonModule, FormsModule, RouterModule, HttpClientModule, TranslationModule],
 })
 export class SuggestionBoxComponent {
   /**
@@ -28,9 +31,19 @@ export class SuggestionBoxComponent {
    */
   constructor(
     private router: Router,
-    private suggestionService: SuggestionService
-  ) {}
+    private suggestionService: SuggestionService,
+    private translate: TranslateService
+  ) {
+     const newLang = this.translate.getBrowserLang() || 'en';
+    this.translate.use(newLang);
+  }
 
+  ngOnInit(): void { 
+    const storedLanguage = localStorage.getItem('selectedLanguage');
+    if (storedLanguage) {
+      this.translate.use(storedLanguage);
+    }
+  }
   /**
    * Handles the form submission to send the suggestion.
    * Validates that the suggestion is not empty, then submits it using SuggestionService.

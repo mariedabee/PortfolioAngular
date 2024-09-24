@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { TranslationModule } from '../translation.module';
+import { TranslateService } from '@ngx-translate/core';
 
 /**
  * Component for displaying a search bar.
@@ -9,11 +11,16 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-search-bar',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, TranslationModule],
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.scss'],
 })
 export class SearchBarComponent implements OnInit {
+  constructor(private translate: TranslateService) {
+    const newLang = this.translate.getBrowserLang() || 'en';
+    this.translate.use(newLang);
+  }
+
   /**
    * EventEmitter that emits the search term whenever a search is triggered.
    */
@@ -30,6 +37,10 @@ export class SearchBarComponent implements OnInit {
    */
   ngOnInit() {
     this.onSearch(); // Emit the initial value when the component is initialized
+    const storedLanguage = localStorage.getItem('selectedLanguage');
+    if (storedLanguage) {
+      this.translate.use(storedLanguage);
+    }
   }
 
   /**

@@ -31,5 +31,48 @@
     "CONFIRM_PASSWORD_PLACEHOLDER": "Passwort bestätigen",
     "SUBMIT_BUTTON": "Registrieren",
     "LOGIN_BUTTON": "Haben Sie bereits ein Konto? Einloggen"
+  },
+  "CONTACT": {
+    "NAME_LABEL": "Name",
+    "NAME_REQUIRED": "Name ist erforderlich.",
+    "EMAIL_LABEL": "E-Mail",
+    "EMAIL_REQUIRED": "E-Mail ist erforderlich.",
+    "EMAIL_INVALID": "Ungültiges E-Mail-Format.",
+    "MESSAGE_LABEL": "Nachricht",
+    "MESSAGE_REQUIRED": "Nachricht ist erforderlich.",
+    "SUBMIT_BUTTON": "Senden"
+  },
+  "SEARCH": {
+    "PLACEHOLDER": "Suche nach psychischen Gesundheitsproblemen..."
+  },
+  "SUGGESTIONS": {
+    "TITLE": "Community-Vorschläge",
+    "COMMENTS_TITLE": "Kommentare",
+    "COMMENT_PLACEHOLDER": "Geben Sie Ihren Kommentar ein...",
+    "ADD_COMMENT_BUTTON": "Kommentar hinzufügen"
+  },
+   "SUGGESTION_FORM": {
+    "TITLE": "Ihre Vorschläge einreichen",
+    "DESCRIPTION": "Ihr Wohlbefinden liegt uns am Herzen. Wenn Sie Ideen oder Vorschläge haben, wie wir unsere Unterstützung und Ressourcen verbessern können, teilen Sie diese bitte hier mit. Ihr Feedback hilft uns, ein besseres Erlebnis und effektivere Ressourcen für alle zu schaffen. Alle Vorschläge sind anonym.",
+    "PLACEHOLDER": "Geben Sie hier Ihren Vorschlag ein...",
+    "SUBMIT_BUTTON": "Einreichen",
+    "SEE_OTHER_BUTTON": "Andere Vorschläge ansehen"
+  },
+  "EXERCISES": {
+    "TITLE": "Verfügbare Übungen",
+    "TYPE_LABEL": "Typ",
+    "DURATION_LABEL": "Dauer",
+    "HELPS_WITH_LABEL": "Hilft bei",
+    "STEPS_TITLE": "Verfügbare Schritte",
+    "NO_EXERCISES_MESSAGE": "Keine Übungen verfügbar."
+  },
+  "NEED_HELP": {
+    "TITLE": "Brauchen Sie sofortige Hilfe?",
+    "ALERT_TEXT": "Bitte rufen Sie die Krisen-Hotline an:",
+    "FETCHING_HOTLINE": "Wir ermitteln Ihren Standort und die nächstgelegene Krisen-Hotline...",
+    "SELF_HELP_TITLE": "Selbsthilfe-Ressourcen erkunden",
+    "SELF_HELP_DESCRIPTION": "Wenn Sie nach weiteren Ressourcen suchen, hier sind einige Optionen:",
+    "SELF_HELP_BUTTON": "Selbsthilfe-Übungen",
+    "BOOK_RECOMMENDATIONS_BUTTON": "Buch-Empfehlungen"
   }
 }

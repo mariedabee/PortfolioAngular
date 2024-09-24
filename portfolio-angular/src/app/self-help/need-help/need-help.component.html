@@ -1,22 +1,26 @@
 <div class="need-help-container">
   <!-- Emergency Help Section -->
   <div *ngIf="hotline" class="emergency-section">
-    <h1>Need Immediate Help?</h1>
-    <p class="alert-text">Please call the crisis hotline:</p>
+    <h1>{{ 'NEED_HELP.TITLE' | translate }}</h1>
+    <p class="alert-text">{{ 'NEED_HELP.ALERT_TEXT' | translate }}</p>
     <p class="hotline-number">{{ hotline }}</p>
   </div>
 
   <div *ngIf="!hotline">
-    <p>Fetching your location and the nearest crisis hotline...</p>
+    <p>{{ 'NEED_HELP.FETCHING_HOTLINE' | translate }}</p>
   </div>
 
   <!-- Self-Help Options Section -->
   <div class="self-help-options">
-    <h2>Explore Self-Help Resources</h2>
-    <p>If you're looking for additional resources, here are some options:</p>
+    <h2>{{ 'NEED_HELP.SELF_HELP_TITLE' | translate }}</h2>
+    <p>{{ 'NEED_HELP.SELF_HELP_DESCRIPTION' | translate }}</p>
 
     <!-- Buttons for navigation -->
-    <button (click)="goToSelfHelpExercises()" class="self-help-button">Self Help Exercises</button>
-    <button (click)="goToBookRecommendations()" class="self-help-button">Book Recommendations</button>
+    <button (click)="goToSelfHelpExercises()" class="self-help-button">
+      {{ 'NEED_HELP.SELF_HELP_BUTTON' | translate }}
+    </button>
+    <button (click)="goToBookRecommendations()" class="self-help-button">
+      {{ 'NEED_HELP.BOOK_RECOMMENDATIONS_BUTTON' | translate }}
+    </button>
   </div>
 </div>

@@ -7,6 +7,8 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core'; 
+import { TranslationModule } from '../translation.module';
 
 /**
  * Component for displaying and handling a contact form.
@@ -17,16 +19,32 @@ import {
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss'],
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, HttpClientModule],
+  imports: [
+    ReactiveFormsModule,
+    CommonModule,
+    HttpClientModule,
+    TranslationModule,
+  ],
 })
 export class ContactFormComponent implements OnInit {
-  contactForm!: FormGroup; 
-  private readonly apiUrl = 'http://localhost:4000/api/send-contact-email';  
+  contactForm!: FormGroup;
+  private readonly apiUrl = 'http://localhost:4000/api/send-contact-email';
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {}
+  constructor(
+    private fb: FormBuilder,
+    private http: HttpClient,
+    private translate: TranslateService
+  ) {
+    const newLang = this.translate.getBrowserLang() || 'en';
+    this.translate.use(newLang);
+  }
 
   ngOnInit(): void {
     this.initializeForm();
+    const storedLanguage = localStorage.getItem('selectedLanguage');
+    if (storedLanguage) {
+      this.translate.use(storedLanguage);
+    }
   }
 
   /**
