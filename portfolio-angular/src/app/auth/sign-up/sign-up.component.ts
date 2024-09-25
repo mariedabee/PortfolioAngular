@@ -4,13 +4,13 @@ import { TranslationModule } from '../../translation.module';
 import { RouterModule } from '@angular/router';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms'; // Import necessary form classes
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-sign-up',
   standalone: true,
-  imports: [TranslationModule, RouterModule, CommonModule, ReactiveFormsModule],
+  imports: [TranslationModule, RouterModule, CommonModule, ReactiveFormsModule, HttpClientModule],
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.scss'],
 })

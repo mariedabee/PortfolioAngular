@@ -1,3 +1,17 @@
+
+## API Endpoints
+
+### Authentication
+
+- **POST /api/auth/signup**: Register a new user.
+- **POST /api/auth/login**: Log in an existing user.
+
+## Configuration
+
+- To modify the API base URL, update the `src/app/api.config.ts` file.
+- Ensure your Node.js backend is running on the specified port.
+
+
 ## Adding Exercises Data
 
 Create a file named exercises.json in your project's assets directory and paste the JSON data into it.
