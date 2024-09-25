@@ -2,13 +2,41 @@
   <div class="signup-box">
     <h2>{{ "SIGNUP.TITLE" | translate }}</h2>
     <p class="description">{{ "SIGNUP.DESCRIPTION" | translate }}</p>
-    <form>
-      <input type="text" placeholder="{{ 'SIGNUP.USERNAME_PLACEHOLDER' | translate }}" required>
-      <input type="email" placeholder="{{ 'SIGNUP.EMAIL_PLACEHOLDER' | translate }}" required>
-      <input type="password" placeholder="{{ 'SIGNUP.PASSWORD_PLACEHOLDER' | translate }}" required>
-      <input type="password" placeholder="{{ 'SIGNUP.CONFIRM_PASSWORD_PLACEHOLDER' | translate }}" required>
-      <button type="submit">{{ 'SIGNUP.SUBMIT_BUTTON' | translate }}</button>
-      <button type="button" class="otherButton">{{ 'SIGNUP.LOGIN_BUTTON' | translate }}</button>
+    
+    <!-- Bind the form to the signUpForm -->
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+      
+      <!-- Username input with validation -->
+      <input type="text" formControlName="username" placeholder="{{ 'SIGNUP.USERNAME_PLACEHOLDER' | translate }}" required>
+      <div *ngIf="signUpForm.get('username')?.invalid && signUpForm.get('username')?.touched">
+        <small class="error">{{ 'SIGNUP.ERRORS.USERNAME_REQUIRED' | translate }}</small>
+      </div>
+
+      <!-- Email input with validation -->
+      <input type="email" formControlName="email" placeholder="{{ 'SIGNUP.EMAIL_PLACEHOLDER' | translate }}" required>
+      <div *ngIf="signUpForm.get('email')?.invalid && signUpForm.get('email')?.touched">
+        <small *ngIf="signUpForm.get('email')?.errors?.['required']">{{ 'SIGNUP.ERRORS.EMAIL_REQUIRED' | translate }}</small>
+        <small *ngIf="signUpForm.get('email')?.errors?.['email']">{{ 'SIGNUP.ERRORS.INVALID_EMAIL' | translate }}</small>
+      </div>
+
+      <!-- Password input with validation -->
+      <input type="password" formControlName="password" placeholder="{{ 'SIGNUP.PASSWORD_PLACEHOLDER' | translate }}" required>
+      <div *ngIf="signUpForm.get('password')?.invalid && signUpForm.get('password')?.touched">
+        <small *ngIf="signUpForm.get('password')?.errors?.['required']">{{ 'SIGNUP.ERRORS.PASSWORD_REQUIRED' | translate }}</small>
+        <small *ngIf="signUpForm.get('password')?.errors?.['minlength']">{{ 'SIGNUP.ERRORS.PASSWORD_MINLENGTH' | translate }}</small>
+      </div>
+
+      <!-- Confirm password input with custom validation -->
+      <input type="password" formControlName="confirmPassword" placeholder="{{ 'SIGNUP.CONFIRM_PASSWORD_PLACEHOLDER' | translate }}" required>
+      <div *ngIf="signUpForm.hasError('notSame') && signUpForm.get('confirmPassword')?.touched">
+        <small class="error">{{ 'SIGNUP.ERRORS.PASSWORD_MISMATCH' | translate }}</small>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" [disabled]="signUpForm.invalid">{{ 'SIGNUP.SUBMIT_BUTTON' | translate }}</button>
+
+      <!-- Login button to redirect -->
+      <button type="button" class="otherButton" [routerLink]="['/login']">{{ 'SIGNUP.LOGIN_BUTTON' | translate }}</button>
     </form>
   </div>
 </div>

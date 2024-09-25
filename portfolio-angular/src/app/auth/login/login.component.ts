@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslationModule } from '../../translation.module';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [TranslationModule],
+  imports: [TranslationModule, RouterModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
