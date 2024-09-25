@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 const { connectDB } = require("./database");
 const { port } = require("./config");
 const nodemailer = require("nodemailer");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
 // Import routes
 const mentalIllnessesRouter = require("./routes/mentalIllnesses");
