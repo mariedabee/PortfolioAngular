@@ -20,14 +20,22 @@
     "SIGN_UP_BUTTON": "Haben Sie noch kein Konto? Registrieren Sie sich"
   },
   "SIGNUP": {
-    "TITLE": "Registrieren",
-    "DESCRIPTION": "Erstellen Sie ein neues Konto, indem Sie die Informationen unten ausfüllen.",
-    "USERNAME_PLACEHOLDER": "Benutzername",
-    "EMAIL_PLACEHOLDER": "E-Mail",
-    "PASSWORD_PLACEHOLDER": "Passwort",
-    "CONFIRM_PASSWORD_PLACEHOLDER": "Passwort bestätigen",
-    "SUBMIT_BUTTON": "Registrieren",
-    "LOGIN_BUTTON": "Haben Sie bereits ein Konto? Einloggen"
+    "TITLE": "Sign Up",
+    "DESCRIPTION": "Create your account",
+    "USERNAME_PLACEHOLDER": "Enter your username",
+    "EMAIL_PLACEHOLDER": "Enter your email",
+    "PASSWORD_PLACEHOLDER": "Enter your password",
+    "CONFIRM_PASSWORD_PLACEHOLDER": "Confirm your password",
+    "SUBMIT_BUTTON": "Sign Up",
+    "LOGIN_BUTTON": "Already have an account? Login",
+    "ERRORS": {
+      "USERNAME_REQUIRED": "Username is required.",
+      "EMAIL_REQUIRED": "Email is required.",
+      "INVALID_EMAIL": "Please enter a valid email.",
+      "PASSWORD_REQUIRED": "Password is required.",
+      "PASSWORD_MINLENGTH": "Password must be at least 6 characters.",
+      "PASSWORD_MISMATCH": "Passwords do not match."
+    }
   },
   "CONTACT": {
     "NAME_LABEL": "Name",

@@ -2,18 +2,22 @@
   <div class="login-box">
     <h2>{{ "LOGIN.TITLE" | translate }}</h2>
     <p class="description">{{ "LOGIN.DESCRIPTION" | translate }}</p>
-    <form>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <input
         type="email"
+        formControlName="email"
         placeholder="{{ 'LOGIN.EMAIL_PLACEHOLDER' | translate }}"
         required
       />
       <input
         type="password"
+        formControlName="password"
         placeholder="{{ 'LOGIN.PASSWORD_PLACEHOLDER' | translate }}"
         required
       />
-      <button type="submit">{{ "LOGIN.SUBMIT_BUTTON" | translate }}</button>
+      <button type="submit" [disabled]="loginForm.invalid">
+        {{ "LOGIN.SUBMIT_BUTTON" | translate }}
+      </button>
       <button type="button" class="otherButton" [routerLink]="['/signup']">
         {{ "LOGIN.SIGN_UP_BUTTON" | translate }}
       </button>
