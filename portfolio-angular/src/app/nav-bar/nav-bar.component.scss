@@ -9,6 +9,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    /* Allow items to wrap on small screens */
 }
 
 .cloudy-navbar ul {
@@ -17,6 +19,10 @@
     padding: 0;
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
+    /* Wrap the menu items if necessary */
+    justify-content: center;
+    /* Center-align menu items */
 }
 
 .cloudy-navbar li {
@@ -29,6 +35,8 @@
     color: #555;
     font-weight: 500;
     transition: color 0.3s ease;
+    font-size: 1rem;
+    /* Default font size */
 }
 
 .cloudy-navbar a:hover {
@@ -40,45 +48,36 @@
     gap: 10px;
     align-items: center;
     padding-left: 20px;
-    /* Space before login/signup */
     border-left: 2px solid rgba(0, 0, 0, 0.1);
-    /* Separator */
+    flex-wrap: wrap;
+    /* Wrap login/signup if necessary */
+    justify-content: center;
+    /* Center-align on smaller screens */
 }
 
 .auth-links a {
     padding: 8px 16px;
     border-radius: 20px;
-    /* Rounded corners for login/signup buttons */
     background-color: #e0e5ec;
-    /* Subtle background */
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 0.9rem;
+    /* Slightly smaller font size */
 }
 
 .auth-links a:hover {
     background-color: #c3cfe2;
     color: #fff;
 }
-/* For better visual effects on smaller screens */
-@media (max-width: 768px) {
-    .cloudy-navbar {
-        max-width: 95%;
-    }
-
-    .cloudy-navbar a {
-        padding: 8px 16px;
-    }
-}
 
 .flag-link {
     padding: 0;
-    /* Remove any padding */
     margin-left: 5px;
-    /* Adjust left margin as needed */
+    display: inline-flex;
+    justify-content: center;
 }
 
 .flag-icon {
     width: 24px;
-    /* Adjust the size as needed */
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -86,5 +85,52 @@
 
 .flag-icon:hover {
     transform: scale(1.1);
-    /* Slight zoom effect on hover */
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .cloudy-navbar {
+        flex-direction: column;
+        /* Stack items vertically on smaller screens */
+        max-width: 95%;
+    }
+
+    .cloudy-navbar a {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        /* Smaller font size for mobile */
+    }
+
+    .auth-links {
+        padding-left: 0;
+        /* Remove the left padding */
+        border-left: none;
+        /* Remove the left border */
+        margin-top: 10px;
+        /* Add space between auth links and the nav */
+    }
+
+    .flag-icon {
+        width: 20px;
+        /* Make flags smaller for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .cloudy-navbar a {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        /* Further reduce font size for very small screens */
+    }
+
+    .auth-links a {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        /* Reduce font size of login/signup */
+    }
+
+    .flag-icon {
+        width: 18px;
+        /* Further reduce flag size */
+    }
 }
