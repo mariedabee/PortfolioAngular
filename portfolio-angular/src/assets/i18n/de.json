@@ -78,7 +78,8 @@
     "SELF_HELP_TITLE": "Selbsthilfe-Ressourcen erkunden",
     "SELF_HELP_DESCRIPTION": "Wenn Sie nach weiteren Ressourcen suchen, hier sind einige Optionen:",
     "SELF_HELP_BUTTON": "Selbsthilfe-Übungen",
-    "BOOK_RECOMMENDATIONS_BUTTON": "Buch-Empfehlungen"
+    "BOOK_RECOMMENDATIONS_BUTTON": "Buch-Empfehlungen",
+    "NEED_HELP.SUPPORT_GROUPS_BUTTON": "Selbsthilfegruppen"
   },
   "BOOK_RECOMMENDATIONS": {
     "TITLE": "Buch-Empfehlungen",

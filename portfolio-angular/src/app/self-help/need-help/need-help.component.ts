@@ -91,4 +91,11 @@ export class NeedHelpComponent implements OnInit {
   goToSelfHelpExercises(): void {
     this.router.navigate(['/self-help-excercises']);
   }
+
+  /**
+   * Navigates to the support groups page.
+   */
+  goToSupportGroupss(): void {
+    this.router.navigate(['/support-groups']);
+  }
 }

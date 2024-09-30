@@ -10,6 +10,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { BookRecommendationsComponent } from './self-help/book-recommendations/book-recommendations.component';
 import { ExercisesComponent } from './self-help/exercises/exercises.component';
+import { SupportGroupComponent } from './self-help/support-group/support-group.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -18,9 +19,13 @@ export const routes: Routes = [
   { path: 'contact', component: ContactFormComponent },
   { path: 'self-help-emergency', component: NeedHelpComponent },
   { path: 'self-help-excercises', component: ExercisesComponent },
-  { path: 'self-help-book-recommendation', component: BookRecommendationsComponent },
+  {
+    path: 'self-help-book-recommendation',
+    component: BookRecommendationsComponent,
+  },
   { path: 'suggestion-box', component: SuggestionBoxComponent },
   { path: 'suggestions-page', component: SuggestionsPageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignUpComponent },
+  { path: 'support-groups', component: SupportGroupComponent },
 ];

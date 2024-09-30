@@ -1,0 +1,7 @@
+<div class="group-list">
+  <app-group-card 
+    *ngFor="let group of groups" 
+    [group]="group" 
+    (joinGroup)="onJoinGroup($event)">
+  </app-group-card>
+</div>

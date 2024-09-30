@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Anxiety Support",
+    "focus": "Anxiety",
+    "schedule": "Monday 8 PM",
+    "description": "A community to support those dealing with anxiety by sharing experiences and coping mechanisms."
+  },
+  {
+    "id": 2,
+    "name": "Depression Support",
+    "focus": "Depression",
+    "schedule": "Tuesday 7 PM",
+    "description": "A space for those dealing with depression to come together and find mutual understanding and encouragement."
+  },
+  {
+    "id": 3,
+    "name": "Stress Management",
+    "focus": "Stress",
+    "schedule": "Wednesday 6 PM",
+    "description": "Join this group to learn how to better manage stress and find balance in your daily life."
+  },
+  {
+    "id": 4,
+    "name": "Grief Support",
+    "focus": "Grief",
+    "schedule": "Thursday 5 PM",
+    "description": "A safe space for people to share their experiences and emotions after losing loved ones."
+  }
+]
