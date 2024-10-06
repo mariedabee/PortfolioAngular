@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { GroupService } from '../../services/group.service';
-import { GroupListComponent } from "./group-list/group-list.component";
+import { GroupListComponent } from "./group-list/group-list.component"; 
+import { SearchBarComponent } from '../../search-bar/search-bar.component';
 
 @Component({
   selector: 'app-support-group',
   standalone: true,
-  imports: [GroupListComponent],
+  imports: [GroupListComponent, SearchBarComponent], // Add SearchBarComponent to imports
   templateUrl: './support-group.component.html',
-  styleUrl: './support-group.component.scss',
+  styleUrls: ['./support-group.component.scss'],
 })
 export class SupportGroupComponent implements OnInit {
   groups: any[] = [];
+  filteredGroups: any[] = []; // Hold filtered groups here
   isVerified: boolean = false;
 
   constructor(private groupService: GroupService) {}
@@ -18,9 +20,9 @@ export class SupportGroupComponent implements OnInit {
   ngOnInit() {
     this.groupService.getGroups().subscribe((data: any[]) => {
       this.groups = data;
+      this.filteredGroups = data; // Initialize filteredGroups with all groups
     });
 
-    // Simulating verification, you would replace this with actual logic
     this.isVerified = true;
   }
 
@@ -35,4 +37,18 @@ export class SupportGroupComponent implements OnInit {
       () => alert('Failed to join the group. Please try again.')
     );
   }
+
+  // This method will be called whenever the search term changes
+  onSearch(searchTerm: string) {
+    if (searchTerm) {
+      // Filter groups based on the search term
+      this.filteredGroups = this.groups.filter(group =>
+        group.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    } else {
+      // If no search term, show all groups
+      this.filteredGroups = [...this.groups];
+    }
+  }
+  
 }

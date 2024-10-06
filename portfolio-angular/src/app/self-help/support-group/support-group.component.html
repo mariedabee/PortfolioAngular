@@ -1,4 +1,10 @@
 <div class="group-page">
   <h1>Support Groups</h1>
-  <app-group-list [groups]="groups" (joinGroup)="onJoinGroup($event)"></app-group-list>
+
+  <!-- Add the search bar -->
+  <app-search-bar (search)="onSearch($event)"></app-search-bar>
+
+  <!-- Pass the filtered groups to the group list -->
+  <app-group-list [groups]="filteredGroups" (joinGroup)="onJoinGroup($event)"></app-group-list>
+
 </div>
