@@ -1,23 +1,19 @@
 services:
   frontend:
-    build:
-      context: .
-      dockerfile: Dockerfile-frontend
+    build: ./portfolio-angular
     ports:
-      - "4200:80" # Maps Angular app to port 4200
-    depends_on:
-      - backend
+      - "4200:80"
+    networks:
+      - app-network
 
   backend:
-    build:
-      context: .
-      dockerfile: Dockerfile-backend
-    ports:
-      - "5000:5000" # Maps backend to port 5000
+    build: ./backend
     environment:
-      MONGO_URI: mongodb://mongo:27017/mentalHealthApp
+      - MONGO_URI=mongodb://mongo:27017/mentalHealthApp
     depends_on:
       - mongo
+    networks:
+      - app-network
 
   mongo:
     image: mongo:4.4
@@ -26,6 +22,12 @@ services:
       - "27017:27017"
     volumes:
       - mongo_data:/data/db
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
 
 volumes:
   mongo_data:
