@@ -5,11 +5,10 @@ import { TranslationModule } from '../translation.module';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-about',
-  standalone: true,
-  imports: [HttpClientModule, CommonModule, TranslationModule],
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss'],
+    selector: 'app-about',
+    imports: [HttpClientModule, CommonModule, TranslationModule],
+    templateUrl: './about.component.html',
+    styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
   constructor(private translate: TranslateService) {

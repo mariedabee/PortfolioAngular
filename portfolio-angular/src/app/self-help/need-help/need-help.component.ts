@@ -12,11 +12,10 @@ import { TranslationModule } from '../../translation.module';
  * Displays local emergency hotlines and provides navigation to self-help resources.
  */
 @Component({
-  selector: 'app-need-help',
-  standalone: true,
-  imports: [CommonModule, HttpClientModule, RouterModule, TranslationModule],
-  templateUrl: './need-help.component.html',
-  styleUrls: ['./need-help.component.scss'],
+    selector: 'app-need-help',
+    imports: [CommonModule, HttpClientModule, RouterModule, TranslationModule],
+    templateUrl: './need-help.component.html',
+    styleUrls: ['./need-help.component.scss']
 })
 export class NeedHelpComponent implements OnInit {
   /**

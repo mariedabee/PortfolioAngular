@@ -12,11 +12,10 @@ import { TranslationModule } from '../../translation.module';
  * Allows users to enter and submit suggestions, and provides navigation to another page.
  */
 @Component({
-  selector: 'app-suggestion-box',
-  standalone: true,
-  templateUrl: './suggestion-box.component.html',
-  styleUrls: ['./suggestion-box.component.scss'],
-  imports: [CommonModule, FormsModule, RouterModule, HttpClientModule, TranslationModule],
+    selector: 'app-suggestion-box',
+    templateUrl: './suggestion-box.component.html',
+    styleUrls: ['./suggestion-box.component.scss'],
+    imports: [CommonModule, FormsModule, RouterModule, HttpClientModule, TranslationModule]
 })
 export class SuggestionBoxComponent {
   /**

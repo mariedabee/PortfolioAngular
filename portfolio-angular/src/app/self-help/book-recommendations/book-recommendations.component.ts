@@ -11,11 +11,10 @@ import { CommonModule } from '@angular/common';
  * Fetches book data from a service and displays them in the component's template.
  */
 @Component({
-  selector: 'app-book-recommendations',
-  standalone: true,
-  imports: [HttpClientModule, TranslationModule, CommonModule],
-  templateUrl: './book-recommendations.component.html',
-  styleUrls: ['./book-recommendations.component.scss'],
+    selector: 'app-book-recommendations',
+    imports: [HttpClientModule, TranslationModule, CommonModule],
+    templateUrl: './book-recommendations.component.html',
+    styleUrls: ['./book-recommendations.component.scss']
 })
 export class BookRecommendationsComponent implements OnInit {
   books: any[] = []; // Array to hold book recommendations

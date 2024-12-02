@@ -10,11 +10,10 @@ import { TranslationModule } from '../../translation.module';
  * Fetches exercises from a service and displays them in the component's template.
  */
 @Component({
-  selector: 'app-exercises',
-  standalone: true,
-  imports: [CommonModule, HttpClientModule, TranslationModule],
-  templateUrl: './exercises.component.html',
-  styleUrls: ['./exercises.component.scss'],
+    selector: 'app-exercises',
+    imports: [CommonModule, HttpClientModule, TranslationModule],
+    templateUrl: './exercises.component.html',
+    styleUrls: ['./exercises.component.scss']
 })
 export class ExercisesComponent implements OnInit {
   /**

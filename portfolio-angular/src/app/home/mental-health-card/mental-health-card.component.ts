@@ -2,11 +2,10 @@ import { HttpClient } from '@angular/common/http';
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-mental-health-card',
-  standalone: true,
-  imports: [],
-  templateUrl: './mental-health-card.component.html',
-  styleUrl: './mental-health-card.component.scss',
+    selector: 'app-mental-health-card',
+    imports: [],
+    templateUrl: './mental-health-card.component.html',
+    styleUrl: './mental-health-card.component.scss'
 })
 export class MentalHealthCardComponent {
   @Input() mentalHealthIssue:

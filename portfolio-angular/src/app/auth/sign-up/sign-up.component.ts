@@ -8,11 +8,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
-  selector: 'app-sign-up',
-  standalone: true,
-  imports: [TranslationModule, RouterModule, CommonModule, ReactiveFormsModule, HttpClientModule],
-  templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.scss'],
+    selector: 'app-sign-up',
+    imports: [TranslationModule, RouterModule, CommonModule, ReactiveFormsModule, HttpClientModule],
+    templateUrl: './sign-up.component.html',
+    styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
   signUpForm!: FormGroup; // Define the FormGroup

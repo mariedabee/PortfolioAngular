@@ -11,11 +11,10 @@ import { AuthService } from '../../services/auth.service';
 import { TranslationModule } from '../../translation.module';
 
 @Component({
-  selector: 'app-login',
-  standalone: true,
-  imports: [RouterModule, ReactiveFormsModule, TranslationModule],
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+    selector: 'app-login',
+    imports: [RouterModule, ReactiveFormsModule, TranslationModule],
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;

@@ -4,11 +4,10 @@ import { GroupListComponent } from "./group-list/group-list.component";
 import { SearchBarComponent } from '../../search-bar/search-bar.component';
 
 @Component({
-  selector: 'app-support-group',
-  standalone: true,
-  imports: [GroupListComponent, SearchBarComponent], // Add SearchBarComponent to imports
-  templateUrl: './support-group.component.html',
-  styleUrls: ['./support-group.component.scss'],
+    selector: 'app-support-group',
+    imports: [GroupListComponent, SearchBarComponent], // Add SearchBarComponent to imports
+    templateUrl: './support-group.component.html',
+    styleUrls: ['./support-group.component.scss']
 })
 export class SupportGroupComponent implements OnInit {
   groups: any[] = [];

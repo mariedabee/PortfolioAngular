@@ -14,11 +14,10 @@ import { TranslationModule } from '../../translation.module';
  * Allows users to view, comment on, and like suggestions.
  */
 @Component({
-  selector: 'app-suggestions-page',
-  standalone: true,
-  imports: [FormsModule, HttpClientModule, CommonModule, TranslationModule],
-  templateUrl: './suggestions-page.component.html',
-  styleUrls: ['./suggestions-page.component.scss'],
+    selector: 'app-suggestions-page',
+    imports: [FormsModule, HttpClientModule, CommonModule, TranslationModule],
+    templateUrl: './suggestions-page.component.html',
+    styleUrls: ['./suggestions-page.component.scss']
 })
 export class SuggestionsPageComponent {
   /**

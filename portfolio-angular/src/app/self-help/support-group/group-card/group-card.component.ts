@@ -2,11 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-group-card',
-  templateUrl: './group-card.component.html',
-  styleUrls: ['./group-card.component.scss'],
-  standalone: true,
-  imports: [CommonModule]
+    selector: 'app-group-card',
+    templateUrl: './group-card.component.html',
+    styleUrls: ['./group-card.component.scss'],
+    imports: [CommonModule]
 })
 export class GroupCardComponent {
   @Input() group: any;

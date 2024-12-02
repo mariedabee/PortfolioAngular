@@ -3,11 +3,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { GroupCardComponent } from '../group-card/group-card.component';
 
 @Component({
-  selector: 'app-group-list',
-  templateUrl: './group-list.component.html',
-  styleUrls: ['./group-list.component.scss'],
-  standalone: true,
-  imports: [CommonModule, GroupCardComponent],
+    selector: 'app-group-list',
+    templateUrl: './group-list.component.html',
+    styleUrls: ['./group-list.component.scss'],
+    imports: [CommonModule, GroupCardComponent]
 })
 export class GroupListComponent {
   @Input() groups: any[] | undefined;

@@ -6,16 +6,15 @@ import { CommonModule } from '@angular/common';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
-  imports: [
-    SearchBarComponent,
-    MentalHealthCardComponent,
-    CommonModule,
-    TranslateModule,
-  ],
-  standalone: true,
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss'],
+    imports: [
+        SearchBarComponent,
+        MentalHealthCardComponent,
+        CommonModule,
+        TranslateModule,
+    ]
 })
 export class HomeComponent {
   mentalHealthIssues: any[] = [];

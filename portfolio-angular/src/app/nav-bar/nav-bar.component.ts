@@ -5,11 +5,10 @@ import { TranslationModule } from '../translation.module';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-nav-bar',
-  standalone: true,
-  imports: [CommonModule, RouterModule, TranslationModule],
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.scss'],
+    selector: 'app-nav-bar',
+    imports: [CommonModule, RouterModule, TranslationModule],
+    templateUrl: './nav-bar.component.html',
+    styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent {
   constructor(private translate: TranslateService) {}

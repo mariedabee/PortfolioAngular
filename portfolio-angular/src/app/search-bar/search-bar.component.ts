@@ -9,11 +9,10 @@ import { TranslateService } from '@ngx-translate/core';
  * Emits the current search term whenever a search is triggered.
  */
 @Component({
-  selector: 'app-search-bar',
-  standalone: true,
-  imports: [CommonModule, FormsModule, TranslationModule],
-  templateUrl: './search-bar.component.html',
-  styleUrls: ['./search-bar.component.scss'],
+    selector: 'app-search-bar',
+    imports: [CommonModule, FormsModule, TranslationModule],
+    templateUrl: './search-bar.component.html',
+    styleUrls: ['./search-bar.component.scss']
 })
 export class SearchBarComponent implements OnInit {
   constructor(private translate: TranslateService) {
