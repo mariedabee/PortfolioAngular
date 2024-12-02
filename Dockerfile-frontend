@@ -1,0 +1,14 @@
+# Dockerfile-frontend
+# Use the official Node.js image for building Angular
+FROM node:16 AS build
+WORKDIR /app
+COPY ./portfolio-angular/package*.json ./
+RUN npm install
+COPY ./portfolio-angular ./
+RUN npm run build --prod
+
+# Use NGINX for serving the built Angular app
+FROM nginx:alpine
+COPY --from=build /app/dist/portfolio-angular /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
