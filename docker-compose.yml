@@ -1,13 +1,17 @@
+version: '3'
+
 services:
   frontend:
-    build: ./portfolio-angular
+    build:
+      context: ./portfolio-angular  # Specify the correct path to the frontend Dockerfile
     ports:
       - "4200:80"
     networks:
       - app-network
 
   backend:
-    build: ./backend
+    build:
+      context: ./backend  # Specify the correct path to the backend Dockerfile
     environment:
       - MONGO_URI=mongodb://mongo:27017/mentalHealthApp
     depends_on:
