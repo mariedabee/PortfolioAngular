@@ -24,8 +24,7 @@ export class AppComponent {
   title = 'mental-Health-app';
 
   constructor(private translate: TranslateService) {
-    // Check if localStorage is available
-    if (typeof window !== 'undefined' && window.localStorage) {
+    if (this.isBrowser()) {
       const storedLanguage = localStorage.getItem('selectedLanguage');
       if (storedLanguage) {
         this.translate.use(storedLanguage);
@@ -36,5 +35,10 @@ export class AppComponent {
       // Handle the case when localStorage is not available (e.g., SSR)
       this.translate.setDefaultLang('en'); // Fallback to default language
     }
+  }
+
+  // Utility method to check if we're in a browser environment
+  isBrowser(): boolean {
+    return typeof window !== 'undefined' && typeof localStorage !== 'undefined';
   }
 }
