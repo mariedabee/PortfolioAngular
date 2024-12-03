@@ -1,25 +1,31 @@
+// Variables for common styles (for maintainability and reuse)
+$border-color: #ccc;
+$card-background-color: rgba(240, 248, 255, 0.613);
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$font-size-header: 18px;
+$font-size-body: 16px;
+
 :host {
     display: block;
     width: 100%;
-    /* This should match the width defined in the parent */
-    box-sizing: border-box;
-    /* Ensure padding and border are included in the width */
+    box-sizing: border-box; // Ensures padding and borders are included in width
 }
+
 .card {
-    border: 1px solid #ccc;
+    border: 1px solid $border-color;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: $box-shadow;
     padding: 20px;
     margin-bottom: 20px;
-    background-color: rgba(240, 248, 255, 0.613);
+    background-color: $card-background-color;
 }
 
 .card-header {
     font-weight: bold;
-    font-size: 18px;
+    font-size: $font-size-header;
     margin-bottom: 10px;
 }
 
 .card-body {
-    font-size: 16px;
+    font-size: $font-size-body;
 }

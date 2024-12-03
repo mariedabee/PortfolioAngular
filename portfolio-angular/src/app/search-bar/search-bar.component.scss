@@ -1,24 +1,36 @@
+// Define reusable variables
+$search-bar-bg: #fff;
+$search-bar-border: #ddd;
+$search-bar-focus-border: #007bff;
+$search-bar-placeholder-color: #999;
+$search-bar-font-size: 16px;
+$search-bar-padding: 10px 15px;
+$max-width: 500px;
+$gap-medium: 20px;
+
+// Search Bar
 .search-bar {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin: $gap-medium 0;
 
     input[type="text"] {
         width: 100%;
-        max-width: 500px;
-        padding: 10px 15px;
-        font-size: 16px;
-        border: 2px solid #ddd;
+        max-width: $max-width;
+        padding: $search-bar-padding;
+        font-size: $search-bar-font-size;
+        border: 2px solid $search-bar-border;
         border-radius: 4px;
+        background-color: $search-bar-bg;
         transition: border-color 0.3s ease;
 
         &:focus {
-            border-color: #007bff;
+            border-color: $search-bar-focus-border;
             outline: none;
         }
 
         &::placeholder {
-            color: #999;
+            color: $search-bar-placeholder-color;
         }
     }
 }

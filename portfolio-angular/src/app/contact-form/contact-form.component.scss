@@ -73,7 +73,11 @@ $contact-error-color: #e74c3c;
         transition: background 0.3s ease; // Use `background` for gradients
 
         &:hover {
-            background: linear-gradient(135deg, darken(#a2c2e6, 10%), darken(#f3e6f5, 10%)); // Adjust gradient for hover
+            background: linear-gradient(
+                135deg,
+                color.adjust(#a2c2e6, $lightness: -10%),
+                color.adjust(#f3e6f5, $lightness: -10%)
+            ); // Adjust gradient for hover using color.adjust()
         }
 
         &:disabled {

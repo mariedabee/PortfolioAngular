@@ -1,4 +1,4 @@
-// Variables for color palette
+// Color Variables
 $background-color: #3333334f;
 $text-color: #f5f5f5;
 $button-gradient: linear-gradient(135deg, #a2c2e6, #f3e6f5); 
@@ -10,12 +10,12 @@ $placeholder-color: #545454;
 $description-color: #545454;
 
 .background {
-    background: linear-gradient(135deg, #a2c2e6, #f3e6f5);
-    min-height: 100vh; // Makes sure the background covers at least the full viewport height
+    background: $button-gradient;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px; 
+    padding: 20px;
 }
 
 .suggestion-box {
@@ -37,8 +37,8 @@ $description-color: #545454;
         color: $description-color;
         font-size: 1em;
         margin-bottom: 15px;
-        line-height: 1.6; 
-        font-style: italic; 
+        line-height: 1.6;
+        font-style: italic;
     }
 
     form {
@@ -63,18 +63,18 @@ $description-color: #545454;
         }
 
         button {
-            background: $button-gradient; // Apply the gradient here
+            background: $button-gradient;
             color: $button-text-color;
             border: none;
             border-radius: 4px;
             padding: 10px 20px;
             font-size: 1em;
             cursor: pointer;
-            transition: background 0.3s; // Use `background` for gradients
+            transition: background 0.3s ease;
             margin: 10px;
 
             &:hover {
-                background: linear-gradient(135deg, darken(#a2c2e6, 10%), darken(#f3e6f5, 10%)); // Adjust gradient for hover
+                background: linear-gradient(135deg, darken(#a2c2e6, 10%), darken(#f3e6f5, 10%));
             }
 
             &:disabled {
@@ -84,24 +84,21 @@ $description-color: #545454;
             }
         }
 
-        .otherButton{
-            background: $other-button-gradient; 
-                color: $other-button-text-color;
-                border: none;
-                border-radius: 4px;
-                padding: 10px 20px;
-                font-size: 1em;
-                cursor: pointer;
-                transition: background 0.3s; 
-                margin-top: 50px;
-                position: relative;
-            
-                &:hover {
-                    background: linear-gradient(135deg, darken(#63778e, 10%), darken(#5b1067, 10%)); // Adjust gradient for hover
-                }
-            
-                
+        .otherButton {
+            background: $other-button-gradient;
+            color: $other-button-text-color;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 50px;
+            position: relative;
+
+            &:hover {
+                background: linear-gradient(135deg, darken(#63778e, 10%), darken(#5b1067, 10%));
+            }
         }
-        
     }
 }

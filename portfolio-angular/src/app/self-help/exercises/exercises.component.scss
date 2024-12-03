@@ -15,80 +15,79 @@ $alert-background: #444; // Darker background for emergency section
     background-color: $background-color;
     color: $text-color;
     max-width: 800px;
-    margin: 0 auto; // Centers the container horizontally
+    margin: 0 auto;
     padding: 40px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-family: 'Roboto', sans-serif; // Ensure consistent font family
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; // Ensures the container takes full viewport height
+    min-height: 100vh;
     margin-top: 5%;
 }
 
 // Exercise List Styling
 .exercise-list {
-    width: 100%; // Full width for the list
-    padding: 0; // Remove default padding
-    margin-top: 20px; // Space above the list
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
 
     li {
-        list-style: none; // Remove default bullets
-        margin-bottom: 20px; // Space between exercises
+        list-style: none;
+        margin-bottom: 20px;
     }
 }
 
 // Styling for individual exercise boxes
 .exercise-box {
-    background-color: darken($background-color, 5%); // Slightly darker background for contrast
-    border: 1px solid $border-color; // Border for separation
-    border-radius: 8px; // Rounded corners
-    padding: 20px; // Padding inside each exercise box
-    transition: transform 0.2s; // Animation on hover
+    background-color: darken($background-color, 5%);
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s;
 
     &:hover {
-        transform: scale(1.02); // Slightly enlarge on hover
+        transform: scale(1.02);
     }
 
     h3 {
-        margin: 0; // Remove default margin
+        margin: 0;
         color: $text-color;
-        font-size: 1.5em; // Larger font size for exercise names
+        font-size: 1.5em;
     }
 
     p {
-        margin: 5px 0; // Space between paragraphs
+        margin: 5px 0;
         color: $description-color;
     }
 
-    // Steps styling inside exercise box
     .self-help-options {
-        margin-top: 15px; // Space above the steps
+        margin-top: 15px;
 
         h4 {
-            margin-bottom: 10px; // Space below the steps title
+            margin-bottom: 10px;
         }
 
         ul {
-            padding: 0; // Remove default padding for inner list
-            list-style: none; // Remove default bullets
+            padding: 0;
+            list-style: none;
 
             li {
-                position: relative; // Positioning for custom bullets
-                margin-bottom: 8px; // Spacing between list items
+                position: relative;
+                margin-bottom: 8px;
 
                 &::before {
-                    content: ''; // Empty content for custom bullet
-                    position: absolute; // Absolute positioning
-                    left: -20px; // Adjust left position
-                    top: 50%; // Center vertically
-                    transform: translateY(-50%); // Center adjustment
-                    width: 8px; // Custom bullet size
-                    height: 8px; // Custom bullet size
-                    border-radius: 50%; // Make it circular
-                    background-color: $button-gradient; // Use gradient color
+                    content: '';
+                    position: absolute;
+                    left: -20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: $button-gradient;
                 }
             }
         }
@@ -102,10 +101,10 @@ $alert-background: #444; // Darker background for emergency section
     }
 
     .exercise-box {
-        padding: 15px; // Adjust padding for smaller screens
+        padding: 15px;
     }
 
     h3 {
-        font-size: 1.4em; // Adjust font size for smaller screens
+        font-size: 1.4em;
     }
 }

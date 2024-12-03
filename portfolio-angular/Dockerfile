@@ -1,29 +1,21 @@
 # Use an official Node.js runtime as a parent image for building the Angular app
 FROM node:18 AS build
 
-# Set the working directory inside the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
+COPY package*.json yarn.lock ./
 
-# Install dependencies for the Angular app
-RUN npm install
+RUN yarn install --legacy-peer-deps
 
-# Copy the rest of the application code
 COPY . .
 
-# Build the Angular app in production mode
-RUN npm run build --prod
+RUN yarn run build -- --configuration production
 
-# Stage 2: Serve the Angular app using Nginx
-FROM nginx:alpine
+# Install `serve` to serve the Angular app
+RUN yarn global add serve
 
-# Copy the build output from the previous stage to Nginx's default public directory
-COPY --from=build /app/dist/portfolio-angular /usr/share/nginx/html
+# Expose port 5000 (default port for `serve`)
+EXPOSE 5000
 
-# Expose port 80 to the outside world
-EXPOSE 80
-
-# Optionally, set the default command for the container to run nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Serve the Angular app
+CMD ["serve", "-s", "dist/portfolio-angular", "-l", "5000"]

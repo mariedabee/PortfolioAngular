@@ -1,15 +1,33 @@
+// Define reusable variables for common styles
+$bg-light: #f9f9f97f;
+$bg-white: #ffffffd3;
+$border-color: rgba(0, 0, 0, 0.1);
+$font-color-dark: #333;
+$font-color-light: #555;
+$font-color-primary: #007bff;
+$font-size-medium: 1.25rem;
+$font-size-small: 1rem;
+$padding-medium: 16px;
+$padding-small: 12px;
+$margin-small: 10px;
+$border-radius: 8px;
+$shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-hover: 0 2px 6px rgba(0, 0, 0, 0.15);
+$gap-medium: 12px;
+
+// Book Recommendations Container
 .book-recommendations-container {
-    max-width: 800px; // Set a maximum width for the container
+    max-width: 800px;
     margin: 0 auto; // Center the container horizontally
-    padding: 16px;
-    background-color: #f9f9f97f;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: $padding-medium;
+    background-color: $bg-light;
+    border-radius: $border-radius;
+    box-shadow: $shadow-light;
 
     .recommendations-title {
         font-size: 1.5rem;
-        margin-bottom: 12px;
-        color: #333;
+        margin-bottom: $gap-medium;
+        color: $font-color-dark;
         text-align: center;
     }
 
@@ -18,38 +36,39 @@
         padding: 0;
 
         .book-item {
-            background: #ffffffd3;
-            padding: 12px;
-            margin-bottom: 10px;
+            background: $bg-white;
+            padding: $padding-small;
+            margin-bottom: $margin-small;
             border-radius: 6px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            box-shadow: $shadow-light;
             transition: transform 0.2s;
 
             h3 {
-                font-size: 1.25rem;
+                font-size: $font-size-medium;
                 margin: 0;
-                color: #007BFF; // Change color as desired
+                color: $font-color-primary;
             }
 
             p {
                 margin: 8px 0;
 
                 strong {
-                    color: #555; // Color for labels
+                    color: $font-color-light; // Color for labels
                 }
             }
 
             &:hover {
                 transform: translateY(-2px);
-                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+                box-shadow: $shadow-hover;
             }
         }
     }
 }
 
+// No Books Message
 .no-books-message {
     text-align: center;
     color: #888;
-    font-size: 1rem;
+    font-size: $font-size-small;
     margin-top: 20px;
 }

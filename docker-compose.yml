@@ -1,37 +1,31 @@
-version: '3'
-
 services:
   frontend:
     build:
-      context: ./portfolio-angular  # Specify the correct path to the frontend Dockerfile
+      context: ./portfolio-angular
     ports:
-      - "4200:80"
-    networks:
-      - app-network
+      - "5000:5000"
+    depends_on:
+      - backend
 
   backend:
     build:
-      context: ./backend  # Specify the correct path to the backend Dockerfile
-    environment:
-      - MONGO_URI=mongodb://mongo:27017/mentalHealthApp
+      context: ./backend
+    ports:
+      - "3000:3000"
     depends_on:
       - mongo
-    networks:
-      - app-network
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/mentalHealthApp
+      - PORT=3000
+      - EMAIL_USER=mariejuly70@gmail.com
+      - EMAIL_PASS=xcusybymihabpowh
 
   mongo:
-    image: mongo:4.4
-    container_name: mongodb
+    image: mongo:latest
     ports:
       - "27017:27017"
     volumes:
-      - mongo_data:/data/db
-    networks:
-      - app-network
-
-networks:
-  app-network:
-    driver: bridge
+      - mongo-data:/data/db
 
 volumes:
-  mongo_data:
+  mongo-data:

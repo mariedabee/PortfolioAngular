@@ -74,7 +74,11 @@ $description-color: #545454;
             margin: 10px 0;
 
             &:hover {
-                background: linear-gradient(135deg, darken(#a2c2e6, 10%), darken(#f3e6f5, 10%));
+                background: linear-gradient(
+                    135deg, 
+                    color.adjust(#a2c2e6, $lightness: -10%), 
+                    color.adjust(#f3e6f5, $lightness: -10%)
+                );
             }
 
             &:disabled {
@@ -96,7 +100,11 @@ $description-color: #545454;
             margin-top: 20px;
 
             &:hover {
-                background: linear-gradient(135deg, darken(#6f849c, 10%), darken(#8f8890, 10%));
+                background: linear-gradient(
+                    135deg, 
+                    color.adjust(#6f849c, $lightness: -10%), 
+                    color.adjust(#8f8890, $lightness: -10%)
+                );
             }
         }
     }

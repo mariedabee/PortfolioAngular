@@ -23,16 +23,27 @@ export class AppComponent {
   title = 'mental-Health-app';
 
   constructor(private translate: TranslateService) {
+    // Check if we're in a browser environment
     if (this.isBrowser()) {
       const storedLanguage = localStorage.getItem('selectedLanguage');
       if (storedLanguage) {
         this.translate.use(storedLanguage);
       } else {
-        this.translate.setDefaultLang('en'); // Fallback to default language
+        // No stored language; use default
+        this.setLanguage('en');
       }
     } else {
-      // Handle the case when localStorage is not available (e.g., SSR)
-      this.translate.setDefaultLang('en'); // Fallback to default language
+      // Not in browser environment; set default
+      this.translate.setDefaultLang('en');
+    }
+  }
+  
+  // Utility method for setting the language and storing it
+  setLanguage(language: string) {
+    this.translate.setDefaultLang(language); // Set default language
+    this.translate.use(language); // Activate the language
+    if (this.isBrowser()) {
+      localStorage.setItem('selectedLanguage', language); // Save to localStorage
     }
   }
 

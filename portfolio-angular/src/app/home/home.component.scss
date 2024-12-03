@@ -1,30 +1,42 @@
-// About Us Page Styles
+// Define variables for colors, font sizes, and spacing
+$main-title-color: #4a91e2ce;
+$subheading-color: #333;
+$text-color: #333;
+$font-family: 'Roboto', sans-serif;
+$line-height: 1.6;
+$container-padding: 20px;
+$max-width: 800px;
+$font-size-base: 1.1em;
+$font-size-h1: 2.5em;
+$font-size-h2: 2em;
+$font-size-small: 1em;
+$space-between-elements: 20px;
 
 .container {
-    max-width: 800px; // Maximum width for large screens
+    max-width: $max-width; // Maximum width for large screens
     margin: 0 auto; // Center the container
-    padding: 20px; // Padding around the container
-    font-family: 'Roboto', sans-serif; // Use the same font as Exercises page
-    color: #333; // Dark text color for readability
-    line-height: 1.6; // Line height for better readability
+    padding: $container-padding; // Padding around the container
+    font-family: $font-family; // Use the same font as Exercises page
+    color: $text-color; // Dark text color for readability
+    line-height: $line-height; // Line height for better readability
 
     h1 {
-        font-size: 2.5em; // Size for main title
+        font-size: $font-size-h1; // Size for main title
         text-align: center; // Center the main title
-        margin-bottom: 20px; // Space below the title
-        color: #4a91e2ce; // Main title color
+        margin-bottom: $space-between-elements; // Space below the title
+        color: $main-title-color; // Main title color
     }
 
     h2 {
-        font-size: 2em; // Size for subheadings
+        font-size: $font-size-h2; // Size for subheadings
         margin-top: 30px; // Space above subheadings
         margin-bottom: 15px; // Space below subheadings
-        color: #333; // Subheading color
+        color: $subheading-color; // Subheading color
     }
 
     p {
-        font-size: 1.1em; // Font size for paragraphs
-        margin-bottom: 20px; // Space below paragraphs
+        font-size: $font-size-base; // Font size for paragraphs
+        margin-bottom: $space-between-elements; // Space below paragraphs
     }
 
     ul {
@@ -33,11 +45,11 @@
     }
 
     li {
-        font-size: 1.1em; // Font size for list items
+        font-size: $font-size-base; // Font size for list items
         margin-bottom: 10px; // Space between list items
     }
 
-    // Responsive Design
+    // Responsive Design (Mobile-first approach)
     @media (max-width: 600px) {
         h1 {
             font-size: 2em; // Smaller font size on small screens
@@ -49,7 +61,7 @@
 
         p,
         li {
-            font-size: 1em; // Smaller font size for paragraphs and list items
+            font-size: $font-size-small; // Smaller font size for paragraphs and list items
         }
     }
 }
