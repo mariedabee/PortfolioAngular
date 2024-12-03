@@ -1,3 +1,4 @@
+@use 'sass:color';
 // Variables for color palette
 $background-color: #3333334f;
 $text-color: #f5f5f5;
@@ -76,7 +77,7 @@ $description-color: #545454;
             &:hover {
                 background: linear-gradient(
                     135deg, 
-                    color.adjust(#a2c2e6, $lightness: -10%), 
+                    color.adjust(#a2c2e6, $lightness: -10%),
                     color.adjust(#f3e6f5, $lightness: -10%)
                 );
             }

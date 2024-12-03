@@ -7,27 +7,29 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { TranslateService } from '@ngx-translate/core'; 
+import { TranslateService } from '@ngx-translate/core';
 import { TranslationModule } from '../translation.module';
+import { environment } from '../../environments/environment';
 
 /**
  * Component for displaying and handling a contact form.
  * Allows users to submit contact information which is sent to a backend server.
  */
 @Component({
-    selector: 'app-contact-form',
-    templateUrl: './contact-form.component.html',
-    styleUrls: ['./contact-form.component.scss'],
-    imports: [
-        ReactiveFormsModule,
-        CommonModule,
-        HttpClientModule,
-        TranslationModule,
-    ]
+  selector: 'app-contact-form',
+  templateUrl: './contact-form.component.html',
+  styleUrls: ['./contact-form.component.scss'],
+  imports: [
+    ReactiveFormsModule,
+    CommonModule,
+    HttpClientModule,
+    TranslationModule,
+  ]
 })
 export class ContactFormComponent implements OnInit {
   contactForm!: FormGroup;
-  private readonly apiUrl = 'http://localhost:4000/api/send-contact-email';
+  successMessage: string | null = null;
+  private readonly apiUrl = environment.apiUrl + '/api/send-contact-email';
 
   constructor(
     private fb: FormBuilder,
@@ -67,13 +69,16 @@ export class ContactFormComponent implements OnInit {
         next: (response) => {
           console.log('Email sent:', response);
           this.contactForm.reset(); // Reset the form on successful submission
+          this.successMessage = 'Your message has been sent successfully!'; // Set success message
         },
         error: (error) => {
           console.error('Error sending email:', error);
+          this.successMessage = null;
         },
       });
     } else {
       console.log('Form is invalid. Please check the fields.');
+      this.successMessage = null;
     }
   }
 }

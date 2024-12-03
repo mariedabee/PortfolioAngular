@@ -1,3 +1,4 @@
+@use 'sass:color';
 // Color Variables
 $background-color: #3333334f;
 $text-color: #f5f5f5;
@@ -74,8 +75,8 @@ $description-color: #545454;
             margin: 10px;
 
             &:hover {
-                background: linear-gradient(135deg, darken(#a2c2e6, 10%), darken(#f3e6f5, 10%));
-            }
+                background: linear-gradient(135deg, color.adjust(#a2c2e6, $lightness: -10%), color.adjust(#f3e6f5, $lightness: -10%));
+                        }
 
             &:disabled {
                 background: $button-gradient;
@@ -97,7 +98,7 @@ $description-color: #545454;
             position: relative;
 
             &:hover {
-                background: linear-gradient(135deg, darken(#63778e, 10%), darken(#5b1067, 10%));
+                background: linear-gradient(135deg, color.adjust(#63778e, $lightness: -10%), color.adjust(#5b1067, $lightness: -10%));
             }
         }
     }

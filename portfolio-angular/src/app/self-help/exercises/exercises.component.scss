@@ -1,3 +1,4 @@
+@use 'sass:color';
 // Color Variables
 $background-color: #3333334f;
 $text-color: #f5f5f5;
@@ -42,8 +43,8 @@ $alert-background: #444; // Darker background for emergency section
 
 // Styling for individual exercise boxes
 .exercise-box {
-    background-color: darken($background-color, 5%);
-    border: 1px solid $border-color;
+    background-color: color.adjust($background-color, $lightness: -5%);
+        border: 1px solid $border-color;
     border-radius: 8px;
     padding: 20px;
     transition: transform 0.2s;

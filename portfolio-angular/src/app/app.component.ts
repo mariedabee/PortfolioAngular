@@ -47,8 +47,10 @@ export class AppComponent {
     }
   }
 
-  // Utility method to check if we're in a browser environment
   isBrowser(): boolean {
-    return typeof window !== 'undefined' && typeof localStorage !== 'undefined';
+    const isBrowser = typeof window !== 'undefined' && typeof localStorage !== 'undefined';
+    console.log('Is browser:', isBrowser);   
+    return isBrowser;
   }
+  
 }

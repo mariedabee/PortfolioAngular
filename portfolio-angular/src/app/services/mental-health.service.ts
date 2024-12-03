@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+; import { environment } from '../../environments/environment'
 
 /**
  * Defines the structure of a mental health issue object with properties.
@@ -27,7 +28,7 @@ interface MentalHealthIssue {
  * command to create it : ng generate service mental-health
  * */
 export class MentalHealthService {
-  private apiUrl = 'http://localhost:4000/api/mental-illnesses';
+  private apiUrl = environment.apiUrl + '/api/mental-illnesses';
 
   /**
    * Injects the HttpClient service for making HTTP requests.

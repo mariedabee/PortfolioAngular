@@ -4,6 +4,7 @@ import { SearchBarComponent } from '../search-bar/search-bar.component';
 import { MentalHealthCardComponent } from './mental-health-card/mental-health-card.component';
 import { CommonModule } from '@angular/common';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { environment } from '../../environments/environment';
 
 @Component({
     selector: 'app-home',
@@ -25,7 +26,7 @@ export class HomeComponent {
 
   performSearch(term: string) {
     this.http
-      .get<any[]>(`http://localhost:4000/api/mental-illnesses?search=${term}`)
+      .get<any[]>(`${environment.apiUrl}/api/mental-illnesses?search=${term}`)
       .subscribe(
         (data) => {
           this.mentalHealthIssues = data;

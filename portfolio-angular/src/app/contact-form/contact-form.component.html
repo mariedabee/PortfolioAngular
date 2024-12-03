@@ -1,4 +1,5 @@
 <div class="container">
+  <div *ngIf="successMessage" class="alert alert-success"> {{ successMessage }} </div>
   <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
     <div class="form-group">
       <label for="name">{{ 'CONTACT.NAME_LABEL' | translate }}</label>

@@ -1,3 +1,4 @@
+@use 'sass:color';
 /* styles.css */
 .app-container {
     position: relative;
@@ -14,8 +15,7 @@
     bottom: 0;
     z-index: -1;
     /* Places the background behind the content */
-    background: linear-gradient(135deg, color.adjust(#6f849c, $lightness: -10%), color.adjust(#8f8890, $lightness: -10%));    filter: blur(8px);
-    -webkit-filter: blur(8px);
+    background: linear-gradient(135deg, color.adjust(#6f849c, $lightness: -10%), color.adjust(#8f8890, $lightness: -10%));    -webkit-filter: blur(8px);
 }
 
 .content-layer {

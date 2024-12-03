@@ -17,7 +17,7 @@ const authRoutes = require("./routes/auth");
 const app = express();
 
 // Port Configuration: Use the `PORT` environment variable with a fallback
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 // Middleware 
 app.use(cors());

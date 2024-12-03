@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment'
 
 export interface Comment {
   text: string;
@@ -24,7 +25,7 @@ export interface Suggestion {
   providedIn: 'root',
 })
 export class SuggestionService {
-  private apiUrl = 'http://localhost:4000/api/suggestions';
+  private apiUrl = environment.apiUrl + '/api/suggestions';
 
   constructor(private http: HttpClient) {}
 

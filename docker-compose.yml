@@ -1,11 +1,14 @@
 services:
-  frontend:
-    build:
-      context: ./portfolio-angular
-    ports:
-      - "5000:5000"
-    depends_on:
-      - backend
+  frontend: 
+    build: 
+      context: ./portfolio-angular 
+      args: 
+      - API_URL=http://backend:3000 
+
+    ports: 
+    - "80:80" 
+    depends_on: 
+    - backend 
 
   backend:
     build:
