@@ -9,6 +9,6 @@ RUN yarn install
 # Copy the rest of your application code 
 COPY . . 
 # Expose port (replace with the actual port your app uses) 
-EXPOSE 3000 
+EXPOSE 3001 
 # Start the Node.js server 
 CMD ["yarn", "start"]

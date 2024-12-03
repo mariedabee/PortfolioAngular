@@ -13,12 +13,12 @@ services:
     build:
       context: ./backend
     ports:
-      - "3000:3000"
+      - "3001:3001"
     depends_on:
       - mongo
     environment:
       - MONGO_URI=mongodb://mongo:27017/mentalHealthApp
-      - PORT=3000
+      - PORT=3001
       - EMAIL_USER=mariejuly70@gmail.com
       - EMAIL_PASS=xcusybymihabpowh
 
