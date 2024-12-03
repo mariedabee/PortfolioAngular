@@ -1,4 +1,4 @@
-# Use an official Node.js runtime as a parent image for building the Angular app
+# Build stage
 FROM node:18 AS build
 
 WORKDIR /app
@@ -22,15 +22,17 @@ RUN sed -i "s|http://backend:3000|${API_URL}|g" src/environments/environment.pro
 # Build the Angular application
 RUN yarn run build -- --configuration production
 
-# Use Nginx to serve the Angular app
-FROM nginx:alpine
+# Production stage
+FROM node:18
 
-# Copy the Angular build output to the Nginx HTML directory
-COPY --from=build /app/dist/portfolio-angular /usr/share/nginx/html
+# Copy the Angular build output to the working directory
+COPY --from=build /app/dist/portfolio-angular/browser /app
+
+# Install serve globally
+RUN npm install -g serve
 
 # Expose port 80
 EXPOSE 80
 
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
-
+# Start the application with serve
+CMD ["serve", "-s", "/app", "-l", "80"]
